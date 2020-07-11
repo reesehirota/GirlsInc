@@ -1,0 +1,171 @@
+---
+title: "OpenStreetMap and Leaflet"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(leaflet)
+#install.packages("sp")
+library(sp)
+```
+
+```{r}
+Holyoke <- leaflet() %>% 
+  setView(lng = -72.638683, lat = 42.202772, zoom = 12)  %>% 
+  addTiles()
+
+Springfield <- leaflet() %>% 
+  setView(lng=-72.541695, lat=42.109048, zoom = 12)  %>% 
+  addTiles()
+
+Chicopee <- leaflet() %>% 
+  setView(lng = -72.577400, lat = 42.170656, zoom = 12)  %>% 
+  addTiles()
+
+#Springfield <- leaflet() %>%
+ # addTiles() %>%  # Add default OpenStreetMap map tiles
+  #addMarkers(lng=-72.541695, lat=42.109048, popup = "Springfield") #add polygons
+
+#Holyoke <- leaflet() %>%
+ # addTiles() %>%  # Add default OpenStreetMap map tiles
+  #addMarkers(lng = -72.638683, lat = 42.202772, popup = "Holyoke") 
+
+#Chicopee <- leaflet() %>%
+ # addTiles() %>%  # Add default OpenStreetMap map tiles
+  #addMarkers(lng = -72.577400, lat = 42.170656, popup = "Chicopee")
+
+Springfield
+Holyoke
+Chicopee
+#-72.638683, 42.202772, holyoke
+#-72.541695, 42.109048, springfield
+#-72.577400, 42.170656, chicopee
+
+class(Holyoke)
+```
+
+adding polygons to the maps above
+```{r}
+Polygon()
+
+SpatialPolygons()
+
+addPolygons()
+
+Springfield %>%
+  addPolygons(color = "#444444", weight = 1, smoothFactor = 0.5,
+    opacity = 1.0, fillOpacity = 0.5,
+    fillColor = ~colorQuantile("YlOrRd", ALAND)(ALAND),
+    highlightOptions = highlightOptions(color = "white", weight = 2,
+      bringToFront = TRUE))
+Holyoke
+Chicopee
+
+
+```
+
+Adding polygons
+
+```{r}
+#install.packages("osmdata")
+#install.packages("tidyverse")
+#install.packages("sf")
+#install.packages("ggmap")
+#install.packages("sp")
+library(osmdata)
+#library(tidyverse)
+library(sf)
+library(ggmap)
+library(sp)
+
+```
+
+```{r}
+features <- available_features()
+View(features)
+head(features)
+
+head(available_tags("amenities"))
+```
+
+```{r}
+chicopee <- getbb("Chicopee") %>%
+      opq() %>%
+       add_osm_feature("amenity", "hospital")
+str(chicopee)
+
+chicopee_osm <- osmdata_sf(chicopee)
+chicopee_osm
+```
+
+```{r}
+chicopee_map <- get_map(getbb("Chicopee"), maptype = "toner-background")
+
+#final map
+ggmap(chicopee_map)+
+  geom_sf(data = chicopee_osm$osm_points,
+          inherit.aes = FALSE,
+          colour = "#238443",
+          fill = "#004529",
+          alpha = .5,
+          size = 4,
+          shape = 21)+
+  labs(x = "", y = "")
+
+```
+
+```{r}
+holyoke <- getbb("Holyoke") %>%
+      opq() %>%
+       add_osm_feature("amenity", "hospital")
+str(holyoke)
+
+holyoke_osm <- osmdata_sf(holyoke)
+holyoke_osm
+```
+
+```{r}
+holyoke_map <- get_map(getbb("Holyoke"), maptype = "toner-background")
+
+#final map
+ggmap(holyoke_map)+
+  geom_sf(data = holyoke_osm$osm_points,
+          inherit.aes = FALSE,
+          colour = "#238443",
+          fill = "#004529",
+          alpha = .5,
+          size = 4,
+          shape = 21)+
+  labs(x = "", y = "")
+```
+
+
+```{r}
+springfield <- getbb("Holyoke") %>%
+      opq() %>%
+       add_osm_feature("amenity", "hospital")
+str(springfield)
+
+springfield_osm <- osmdata_sf(springfield)
+springfield_osm
+```
+
+```{r}
+springfield_map <- get_map(getbb("Springfield"), maptype = "toner-background") #make its springfield in MA
+
+#final map
+ggmap(springfield_map)+
+  geom_sf(data = springfield_osm$osm_points,
+          inherit.aes = FALSE,
+          colour = "#238443",
+          fill = "#004529",
+          alpha = .5,
+          size = 4,
+          shape = 21)+
+  labs(x = "", y = "")
+```
+
