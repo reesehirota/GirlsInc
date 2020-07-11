@@ -1,0 +1,114 @@
+---
+title: "Maha"
+output: html_document
+---
+
+to push to git, need to pull other stuff from repository first
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+###Info on the data set:
+data from 2000 to 2015. hospital admissions for males and females of under 5 years to 34 years of age in Chicopee, Springfield and Holyoke
+
+
+Packages to call
+```{r}
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+library(plyr)
+library(readr)
+library(readxl)
+library(naniar)
+```
+
+reading the csv into a data frame:
+```{r}
+asthma_hospitalization <- read_csv("asthma_hospitalization.csv")
+```
+
+renaming column names:
+```{r}
+names(asthma_hospitalization)[4] <- "age_group"
+names(asthma_hospitalization)[5] <- "outcome_type"
+names(asthma_hospitalization)[6] <- "patient_diagnosis"
+names(asthma_hospitalization)[7] <- "case_count"
+names(asthma_hospitalization)[8] <- "census_population_count"
+names(asthma_hospitalization)[9] <- "crude_rate"
+names(asthma_hospitalization)[10] <- "confidence_intervals"
+names(asthma_hospitalization)[11] <- "statistical_difference"
+names(asthma_hospitalization)[12] <- "stability"
+names(asthma_hospitalization)[13] <- "state_case_count"
+names(asthma_hospitalization)[14] <- "state_census_population_count"
+names(asthma_hospitalization)[15] <- "state"
+names(asthma_hospitalization)[16] <- "state_conf_intervals"
+```
+
+```{r}
+#summary of the data set
+summary(asthma_hospitalization)
+
+#dimension of the data set
+dim(asthma_hospitalization)
+```
+
+
+```{r}
+#count how many data points of each geography
+count(asthma_hospitalization$Geography == "Springfield")
+count(asthma_hospitalization$Geography == "Chicopee")
+count(asthma_hospitalization$Geography == "Holyoke")
+
+#count how many data points are of particular statistical significances
+count(asthma_hospitalization$statistical_difference == "Statistically significantly higher")
+count(asthma_hospitalization$statistical_difference == "NS")
+
+```
+
+```{r}
+ggplot(data = asthma_hospitalization, mapping = aes(x = Year, y = crude_rate, color = Geography))+
+  geom_bar(stat = "identity")
+
+ggplot(data = asthma_hospitalization, mapping = aes(x = state_case_count, y = case_count, color = Geography))+
+  geom_point()
+
+ggplot(data = asthma_hospitalization, mapping = aes(x = case_count, y = crude_rate, color = Geography))+
+  geom_point()
+
+```
+
+
+```{r}
+#all with NS
+
+#by crude_rate
+ggplot(data = asthma_hospitalization, mapping = aes(x = Geography,y = crude_rate, color = statistical_difference))+
+  geom_bar(stat = "identity") +
+  ggtitle("Asthma-related Hospitalizations-Crude Rate")+ 
+  labs(y= "Crude Rate", x = "Geographical Location", colour = "Statistical Significance")
+
+#by case_count
+ggplot(data = asthma_hospitalization, mapping = aes(x = Geography,y = case_count, color = statistical_difference))+
+  geom_bar(stat = "identity") +
+  ggtitle("Asthma-related Hospitalizations-Case Count")+ 
+  labs(y= "Case Count", x = "Geographical Location", colour = "Statistical Significance")
+```
+
+
+```{r}
+#creating a new data set with no rows without information on statistical significance
+asthma_hospitalization_sig <- asthma_hospitalization %>%
+  filter(statistical_difference != "NS")
+```
+
+
+```{r}
+#plot of crude_rate without NS-- won't show totality of cases in many places so not very useful
+ggplot(data = asthma_hospitalization_sig, mapping = aes(x = Geography,y = crude_rate, color = statistical_difference))+
+  geom_bar(stat = "identity") +
+  ggtitle("Asthma-related Hospitalizations")+ 
+  labs(y= "Crude Rate", x = "Geographical Location", colour = "Statistical Significance")
+```
+
+
