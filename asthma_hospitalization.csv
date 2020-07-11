@@ -1,0 +1,145 @@
+Geography,Year,Sex,Age Group,Outcome Type,Patient Diagnosis,Case Count,Census Population Count,Crude Rate,Confidence Intervals,Statistical Difference,Stability,State Case Count,State Census Population Count,State ,State Confidence Intervals
+Chicopee,2000,Total,Under 5 Years,Hospital Admission,Asthma,NS,2986,NS,NS,NS,NS,1074,397268,27,11.9 - 12.1
+Chicopee,2000,Total,5 to 14 Years,Hospital Admission,Asthma,NS,7072,NS,NS,NS,NS,1020,862108,11.8,11.9 - 12.1
+Chicopee,2000,Total,15 to 34 Years,Hospital Admission,Asthma,NS,14165,NS,NS,NS,NS,1296,1746804,7.4,11.9 - 12.1
+Chicopee,2001,Total,Under 5 Years,Hospital Admission,Asthma,NS,2997,NS,NS,NS,NS,1384,394250,35.1,11.9 - 12.1
+Chicopee,2001,Total,5 to 14 Years,Hospital Admission,Asthma,NS,6980,NS,NS,NS,NS,1078,855027,12.6,11.9 - 12.1
+Chicopee,2001,Total,15 to 34 Years,Hospital Admission,Asthma,NS,14261,NS,NS,NS,NS,1275,1750480,7.3,11.9 - 12.1
+Chicopee,2002,Total,Under 5 Years,Hospital Admission,Asthma,NS,3009,NS,NS,NS,NS,1292,391232,33,11.9 - 12.1
+Chicopee,2002,Total,5 to 14 Years,Hospital Admission,Asthma,NS,6887,NS,NS,NS,NS,1015,847946,12,11.9 - 12.1
+Chicopee,2002,Total,15 to 34 Years,Hospital Admission,Asthma,13,14357,9.1,4.1 - 14,Not statistically significantly different,Stable,1143,1754156,6.5,11.9 - 12.1
+Chicopee,2003,Total,Under 5 Years,Hospital Admission,Asthma,NS,3020,NS,NS,NS,NS,1650,388214,42.5,11.9 - 12.1
+Chicopee,2003,Total,5 to 14 Years,Hospital Admission,Asthma,NS,6795,NS,NS,NS,NS,1283,840866,15.3,11.9 - 12.1
+Chicopee,2003,Total,15 to 34 Years,Hospital Admission,Asthma,13,14455,9,4.1 - 13.9,Not statistically significantly different,Stable,1387,1757834,7.9,11.9 - 12.1
+Chicopee,2004,Total,Under 5 Years,Hospital Admission,Asthma,NS,3031,NS,NS,NS,NS,1411,385195,36.6,11.9 - 12.1
+Chicopee,2004,Total,5 to 14 Years,Hospital Admission,Asthma,NS,6703,NS,NS,NS,NS,1026,833785,12.3,11.9 - 12.1
+Chicopee,2004,Total,15 to 34 Years,Hospital Admission,Asthma,NS,14552,NS,NS,NS,NS,998,1761510,5.7,11.9 - 12.1
+Chicopee,2005,Total,Under 5 Years,Hospital Admission,Asthma,NS,3043,NS,NS,NS,NS,1271,382178,33.3,11.9 - 12.1
+Chicopee,2005,Total,5 to 14 Years,Hospital Admission,Asthma,NS,6611,NS,NS,NS,NS,973,826705,11.8,11.9 - 12.1
+Chicopee,2005,Total,15 to 34 Years,Hospital Admission,Asthma,NS,14650,NS,NS,NS,NS,964,1765186,5.5,11.9 - 12.1
+Chicopee,2006,Total,Under 5 Years,Hospital Admission,Asthma,NS,3054,NS,NS,NS,NS,1531,379160,40.4,11.9 - 12.1
+Chicopee,2006,Total,5 to 14 Years,Hospital Admission,Asthma,NS,6517,NS,NS,NS,NS,1139,819623,13.9,11.9 - 12.1
+Chicopee,2006,Total,15 to 34 Years,Hospital Admission,Asthma,13,14745,8.8,4 - 13.6,Not statistically significantly different,Stable,1022,1768859,5.8,11.9 - 12.1
+Chicopee,2007,Total,Under 5 Years,Hospital Admission,Asthma,NS,3065,NS,NS,NS,NS,1544,376141,41.1,11.9 - 12.1
+Chicopee,2007,Total,5 to 14 Years,Hospital Admission,Asthma,NS,6425,NS,NS,NS,NS,1163,812543,14.3,11.9 - 12.1
+Chicopee,2007,Total,15 to 34 Years,Hospital Admission,Asthma,19,14842,12.8,7 - 18.6,Statistically significantly higher,Stable,1099,1772535,6.2,11.9 - 12.1
+Chicopee,2008,Total,Under 5 Years,Hospital Admission,Asthma,NS,3076,NS,NS,NS,NS,1854,373123,49.7,11.9 - 12.1
+Chicopee,2008,Total,5 to 14 Years,Hospital Admission,Asthma,NS,6333,NS,NS,NS,NS,1217,805462,15.1,11.9 - 12.1
+Chicopee,2008,Total,15 to 34 Years,Hospital Admission,Asthma,18,14940,12,6.5 - 17.7,Statistically significantly higher,Stable,1059,1776213,6,11.9 - 12.1
+Chicopee,2009,Total,Under 5 Years,Hospital Admission,Asthma,NS,3088,NS,NS,NS,NS,1513,370105,40.9,11.9 - 12.1
+Chicopee,2009,Total,5 to 14 Years,Hospital Admission,Asthma,11,6240,17.6,7.2 - 28,Not statistically significantly different,Unstable,1194,798382,15,11.9 - 12.1
+Chicopee,2009,Total,15 to 34 Years,Hospital Admission,Asthma,28,15036,18.6,11.7 - 25.5,Statistically significantly higher,Stable,1323,1779889,7.4,11.9 - 12.1
+Chicopee,2010,Total,Under 5 Years,Hospital Admission,Asthma,NS,3101.88956243,NS,NS,NS,NS,1732,367071,47.2,11.9 - 12.1
+Chicopee,2010,Total,5 to 14 Years,Hospital Admission,Asthma,NS,6155.48093351,NS,NS,NS,NS,1156,791284.12198781,14.6,11.9 - 12.1
+Chicopee,2010,Total,15 to 34 Years,Hospital Admission,Asthma,12,15134.84779086,7.9,3.4 - 12.4,Not statistically significantly different,Stable,1122,1783498.64162874,6.3,11.9 - 12.1
+Chicopee,2011,Total,Under 5 Years,Hospital Admission,Asthma,NS,3107.47479199,NS,NS,NS,NS,1599,367412.28260238,43.5,11.9 - 12.1
+Chicopee,2011,Total,5 to 14 Years,Hospital Admission,Asthma,NS,6136.34135271,NS,NS,NS,NS,1217,787289.05805541,15.5,11.9 - 12.1
+Chicopee,2011,Total,15 to 34 Years,Hospital Admission,Asthma,13,15469.57444333,8.4,3.8 - 13,Not statistically significantly different,Stable,1122,1824669.31040652,6.2,11.9 - 12.1
+Chicopee,2012,Total,Under 5 Years,Hospital Admission,Asthma,NS,3093.19837416,NS,NS,NS,NS,1320,366168.9173216,36.1,11.9 - 12.1
+Chicopee,2012,Total,5 to 14 Years,Hospital Admission,Asthma,11,6139.82842728,17.9,7.3 - 28.5,Not statistically significantly different,Unstable,1041,786297.9727776,13.2,11.9 - 12.1
+Chicopee,2012,Total,15 to 34 Years,Hospital Admission,Asthma,11,15561.18070864,7.1,2.9 - 11.3,Not statistically significantly different,Unstable,1070,1849918.58528003,5.8,11.9 - 12.1
+Chicopee,2013,Total,Under 5 Years,Hospital Admission,Asthma,NS,3074.79348219,NS,NS,NS,NS,1041,365214.79308509,28.5,11.9 - 12.1
+Chicopee,2013,Total,5 to 14 Years,Hospital Admission,Asthma,NS,6161.53014499,NS,NS,NS,NS,956,786060.81695874,12.2,11.9 - 12.1
+Chicopee,2013,Total,15 to 34 Years,Hospital Admission,Asthma,NS,15683.56427048,NS,NS,NS,NS,924,1876487.34569377,4.9,11.9 - 12.1
+Chicopee,2014,Total,Under 5 Years,Hospital Admission,Asthma,0,3074.0307511,0,0 - 20.8,Statistically significantly lower,Unstable,1049,365159.71058863,28.7,11.9 - 12.1
+Chicopee,2014,Total,5 to 14 Years,Hospital Admission,Asthma,NS,6150.62555769,NS,NS,NS,NS,1022,782375.50231179,13.1,11.9 - 12.1
+Chicopee,2014,Total,15 to 34 Years,Hospital Admission,Asthma,NS,15857.33362938,NS,NS,NS,NS,1022,1900006.59823583,5.4,11.9 - 12.1
+Chicopee,2015,Total,Under 5 Years,Hospital Admission,Asthma,NS,3061.87988117,NS,NS,NS,NS,922,364808.5131263,25.3,11.9 - 12.1
+Chicopee,2015,Total,5 to 14 Years,Hospital Admission,Asthma,NS,6146.52867366,NS,NS,NS,NS,902,777942.36966322,11.6,11.9 - 12.1
+Chicopee,2015,Total,15 to 34 Years,Hospital Admission,Asthma,19,15868.47910794,12,6.6 - 17.4,Statistically significantly higher,Stable,903,1916981.76622685,4.7,11.9 - 12.1
+Holyoke,2000,Total,Under 5 Years,Hospital Admission,Asthma,12,3156,38,16.5 - 59.5,Not statistically significantly different,Stable,1074,397268,27,11.9 - 12.1
+Holyoke,2000,Total,5 to 14 Years,Hospital Admission,Asthma,NS,6712,NS,NS,NS,NS,1020,862108,11.8,11.9 - 12.1
+Holyoke,2000,Total,15 to 34 Years,Hospital Admission,Asthma,NS,10626,NS,NS,NS,NS,1296,1746804,7.4,11.9 - 12.1
+Holyoke,2001,Total,Under 5 Years,Hospital Admission,Asthma,12,3148,38.1,16.6 - 59.7,Not statistically significantly different,Stable,1384,394250,35.1,11.9 - 12.1
+Holyoke,2001,Total,5 to 14 Years,Hospital Admission,Asthma,NS,6590,NS,NS,NS,NS,1078,855027,12.6,11.9 - 12.1
+Holyoke,2001,Total,15 to 34 Years,Hospital Admission,Asthma,15,10699,14,6.9 - 21.1,Not statistically significantly different,Stable,1275,1750480,7.3,11.9 - 12.1
+Holyoke,2002,Total,Under 5 Years,Hospital Admission,Asthma,17,3140,54.1,28.4 - 79.8,Not statistically significantly different,Stable,1292,391232,33,11.9 - 12.1
+Holyoke,2002,Total,5 to 14 Years,Hospital Admission,Asthma,NS,6467,NS,NS,NS,NS,1015,847946,12,11.9 - 12.1
+Holyoke,2002,Total,15 to 34 Years,Hospital Admission,Asthma,15,10771,13.9,6.9 - 20.9,Not statistically significantly different,Stable,1143,1754156,6.5,11.9 - 12.1
+Holyoke,2003,Total,Under 5 Years,Hospital Admission,Asthma,13,3132,41.5,18.9 - 64.1,Not statistically significantly different,Stable,1650,388214,42.5,11.9 - 12.1
+Holyoke,2003,Total,5 to 14 Years,Hospital Admission,Asthma,NS,6346,NS,NS,NS,NS,1283,840866,15.3,11.9 - 12.1
+Holyoke,2003,Total,15 to 34 Years,Hospital Admission,Asthma,16,10846,14.8,7.5 - 22,Not statistically significantly different,Stable,1387,1757834,7.9,11.9 - 12.1
+Holyoke,2004,Total,Under 5 Years,Hospital Admission,Asthma,11,3124,35.2,14.4 - 56,Not statistically significantly different,Unstable,1411,385195,36.6,11.9 - 12.1
+Holyoke,2004,Total,5 to 14 Years,Hospital Admission,Asthma,NS,6224,NS,NS,NS,NS,1026,833785,12.3,11.9 - 12.1
+Holyoke,2004,Total,15 to 34 Years,Hospital Admission,Asthma,NS,10918,NS,NS,NS,NS,998,1761510,5.7,11.9 - 12.1
+Holyoke,2005,Total,Under 5 Years,Hospital Admission,Asthma,NS,3116,NS,NS,NS,NS,1271,382178,33.3,11.9 - 12.1
+Holyoke,2005,Total,5 to 14 Years,Hospital Admission,Asthma,NS,6102,NS,NS,NS,NS,973,826705,11.8,11.9 - 12.1
+Holyoke,2005,Total,15 to 34 Years,Hospital Admission,Asthma,NS,10992,NS,NS,NS,NS,964,1765186,5.5,11.9 - 12.1
+Holyoke,2006,Total,Under 5 Years,Hospital Admission,Asthma,NS,3108,NS,NS,NS,NS,1531,379160,40.4,11.9 - 12.1
+Holyoke,2006,Total,5 to 14 Years,Hospital Admission,Asthma,NS,5978,NS,NS,NS,NS,1139,819623,13.9,11.9 - 12.1
+Holyoke,2006,Total,15 to 34 Years,Hospital Admission,Asthma,15,11061,13.6,6.7 - 20.5,Statistically significantly higher,Stable,1022,1768859,5.8,11.9 - 12.1
+Holyoke,2007,Total,Under 5 Years,Hospital Admission,Asthma,13,3100,41.9,19.1 - 64.7,Not statistically significantly different,Stable,1544,376141,41.1,11.9 - 12.1
+Holyoke,2007,Total,5 to 14 Years,Hospital Admission,Asthma,11,5856,18.8,7.7 - 29.9,Not statistically significantly different,Unstable,1163,812543,14.3,11.9 - 12.1
+Holyoke,2007,Total,15 to 34 Years,Hospital Admission,Asthma,12,11134,10.8,4.7 - 16.9,Not statistically significantly different,Stable,1099,1772535,6.2,11.9 - 12.1
+Holyoke,2008,Total,Under 5 Years,Hospital Admission,Asthma,NS,3092,NS,NS,NS,NS,1854,373123,49.7,11.9 - 12.1
+Holyoke,2008,Total,5 to 14 Years,Hospital Admission,Asthma,NS,5735,NS,NS,NS,NS,1217,805462,15.1,11.9 - 12.1
+Holyoke,2008,Total,15 to 34 Years,Hospital Admission,Asthma,15,11208,13.4,6.6 - 20.2,Statistically significantly higher,Stable,1059,1776213,6,11.9 - 12.1
+Holyoke,2009,Total,Under 5 Years,Hospital Admission,Asthma,13,3084,42.2,19.2 - 65.1,Not statistically significantly different,Stable,1513,370105,40.9,11.9 - 12.1
+Holyoke,2009,Total,5 to 14 Years,Hospital Admission,Asthma,NS,5612,NS,NS,NS,NS,1194,798382,15,11.9 - 12.1
+Holyoke,2009,Total,15 to 34 Years,Hospital Admission,Asthma,18,11281,16,8.6 - 23.4,Statistically significantly higher,Stable,1323,1779889,7.4,11.9 - 12.1
+Holyoke,2010,Total,Under 5 Years,Hospital Admission,Asthma,NS,3078.51392726,NS,NS,NS,NS,1732,367071,47.2,11.9 - 12.1
+Holyoke,2010,Total,5 to 14 Years,Hospital Admission,Asthma,NS,5493.03502588,NS,NS,NS,NS,1156,791284.12198781,14.6,11.9 - 12.1
+Holyoke,2010,Total,15 to 34 Years,Hospital Admission,Asthma,16,11356.24399563,14.1,7.2 - 21,Statistically significantly higher,Stable,1122,1783498.64162874,6.3,11.9 - 12.1
+Holyoke,2011,Total,Under 5 Years,Hospital Admission,Asthma,NS,3058.95935068,NS,NS,NS,NS,1599,367412.28260238,43.5,11.9 - 12.1
+Holyoke,2011,Total,5 to 14 Years,Hospital Admission,Asthma,NS,5529.17974929,NS,NS,NS,NS,1217,787289.05805541,15.5,11.9 - 12.1
+Holyoke,2011,Total,15 to 34 Years,Hospital Admission,Asthma,21,11535.95818563,18.2,10.4 - 26,Statistically significantly higher,Stable,1122,1824669.31040652,6.2,11.9 - 12.1
+Holyoke,2012,Total,Under 5 Years,Hospital Admission,Asthma,12,3002.27428282,40,17.4 - 62.6,Not statistically significantly different,Stable,1320,366168.9173216,36.1,11.9 - 12.1
+Holyoke,2012,Total,5 to 14 Years,Hospital Admission,Asthma,NS,5551.66973036,NS,NS,NS,NS,1041,786297.9727776,13.2,11.9 - 12.1
+Holyoke,2012,Total,15 to 34 Years,Hospital Admission,Asthma,22,11540.85821548,19.1,11.1 - 27.1,Statistically significantly higher,Stable,1070,1849918.58528003,5.8,11.9 - 12.1
+Holyoke,2013,Total,Under 5 Years,Hospital Admission,Asthma,12,2946.5777163,40.7,17.7 - 63.7,Not statistically significantly different,Stable,1041,365214.79308509,28.5,11.9 - 12.1
+Holyoke,2013,Total,5 to 14 Years,Hospital Admission,Asthma,NS,5573.63302207,NS,NS,NS,NS,956,786060.81695874,12.2,11.9 - 12.1
+Holyoke,2013,Total,15 to 34 Years,Hospital Admission,Asthma,24,11585.06027325,20.7,12.4 - 29,Statistically significantly higher,Stable,924,1876487.34569377,4.9,11.9 - 12.1
+Holyoke,2014,Total,Under 5 Years,Hospital Admission,Asthma,NS,2884.6088656,NS,NS,NS,NS,1049,365159.71058863,28.7,11.9 - 12.1
+Holyoke,2014,Total,5 to 14 Years,Hospital Admission,Asthma,NS,5566.40935529,NS,NS,NS,NS,1022,782375.50231179,13.1,11.9 - 12.1
+Holyoke,2014,Total,15 to 34 Years,Hospital Admission,Asthma,18,11673.46364249,15.4,8.3 - 22.5,Statistically significantly higher,Stable,1022,1900006.59823583,5.4,11.9 - 12.1
+Holyoke,2015,Total,Under 5 Years,Hospital Admission,Asthma,NS,2848.62412615,NS,NS,NS,NS,922,364808.5131263,25.3,11.9 - 12.1
+Holyoke,2015,Total,5 to 14 Years,Hospital Admission,Asthma,14,5537.18235961,25.3,12 - 38.5,Not statistically significantly different,Stable,902,777942.36966322,11.6,11.9 - 12.1
+Holyoke,2015,Total,15 to 34 Years,Hospital Admission,Asthma,23,11656.91100782,19.7,11.7 - 27.8,Statistically significantly higher,Stable,903,1916981.76622685,4.7,11.9 - 12.1
+Springfield,2000,Total,Under 5 Years,Hospital Admission,Asthma,29,11606,25,15.9 - 34.1,Not statistically significantly different,Stable,1074,397268,27,11.9 - 12.1
+Springfield,2000,Total,5 to 14 Years,Hospital Admission,Asthma,38,25449,14.9,10.2 - 19.6,Not statistically significantly different,Stable,1020,862108,11.8,11.9 - 12.1
+Springfield,2000,Total,15 to 34 Years,Hospital Admission,Asthma,62,45612,13.6,10.2 - 17,Statistically significantly higher,Stable,1296,1746804,7.4,11.9 - 12.1
+Springfield,2001,Total,Under 5 Years,Hospital Admission,Asthma,53,11564,45.8,33.5 - 58.1,Not statistically significantly different,Stable,1384,394250,35.1,11.9 - 12.1
+Springfield,2001,Total,5 to 14 Years,Hospital Admission,Asthma,55,25157,21.9,16.1 - 27.7,Statistically significantly higher,Stable,1078,855027,12.6,11.9 - 12.1
+Springfield,2001,Total,15 to 34 Years,Hospital Admission,Asthma,82,45859,17.9,14 - 21.8,Statistically significantly higher,Stable,1275,1750480,7.3,11.9 - 12.1
+Springfield,2002,Total,Under 5 Years,Hospital Admission,Asthma,35,11521,30.4,20.3 - 40.5,Not statistically significantly different,Stable,1292,391232,33,11.9 - 12.1
+Springfield,2002,Total,5 to 14 Years,Hospital Admission,Asthma,34,24864,13.7,9.1 - 18.3,Not statistically significantly different,Stable,1015,847946,12,11.9 - 12.1
+Springfield,2002,Total,15 to 34 Years,Hospital Admission,Asthma,64,46104,13.9,10.5 - 17.3,Statistically significantly higher,Stable,1143,1754156,6.5,11.9 - 12.1
+Springfield,2003,Total,Under 5 Years,Hospital Admission,Asthma,38,11480,33.1,22.6 - 43.6,Not statistically significantly different,Stable,1650,388214,42.5,11.9 - 12.1
+Springfield,2003,Total,5 to 14 Years,Hospital Admission,Asthma,35,24573,14.2,9.5 - 18.9,Not statistically significantly different,Stable,1283,840866,15.3,11.9 - 12.1
+Springfield,2003,Total,15 to 34 Years,Hospital Admission,Asthma,93,46351,20.1,16 - 24.2,Statistically significantly higher,Stable,1387,1757834,7.9,11.9 - 12.1
+Springfield,2004,Total,Under 5 Years,Hospital Admission,Asthma,25,11437,21.9,13.3 - 30.5,Statistically significantly lower,Stable,1411,385195,36.6,11.9 - 12.1
+Springfield,2004,Total,5 to 14 Years,Hospital Admission,Asthma,25,24281,10.3,6.3 - 14.3,Not statistically significantly different,Stable,1026,833785,12.3,11.9 - 12.1
+Springfield,2004,Total,15 to 34 Years,Hospital Admission,Asthma,44,46597,9.4,6.7 - 12.2,Statistically significantly higher,Stable,998,1761510,5.7,11.9 - 12.1
+Springfield,2005,Total,Under 5 Years,Hospital Admission,Asthma,31,11395,27.2,17.6 - 36.8,Not statistically significantly different,Stable,1271,382178,33.3,11.9 - 12.1
+Springfield,2005,Total,5 to 14 Years,Hospital Admission,Asthma,27,23990,11.3,7 - 15.5,Not statistically significantly different,Stable,973,826705,11.8,11.9 - 12.1
+Springfield,2005,Total,15 to 34 Years,Hospital Admission,Asthma,44,46845,9.4,6.6 - 12.2,Statistically significantly higher,Stable,964,1765186,5.5,11.9 - 12.1
+Springfield,2006,Total,Under 5 Years,Hospital Admission,Asthma,37,11352,32.6,22.1 - 43.1,Not statistically significantly different,Stable,1531,379160,40.4,11.9 - 12.1
+Springfield,2006,Total,5 to 14 Years,Hospital Admission,Asthma,29,23696,12.2,7.8 - 16.7,Not statistically significantly different,Stable,1139,819623,13.9,11.9 - 12.1
+Springfield,2006,Total,15 to 34 Years,Hospital Admission,Asthma,61,47091,13,9.7 - 16.2,Statistically significantly higher,Stable,1022,1768859,5.8,11.9 - 12.1
+Springfield,2007,Total,Under 5 Years,Hospital Admission,Asthma,37,11310,32.7,22.2 - 43.2,Not statistically significantly different,Stable,1544,376141,41.1,11.9 - 12.1
+Springfield,2007,Total,5 to 14 Years,Hospital Admission,Asthma,26,23404,11.1,6.8 - 15.4,Not statistically significantly different,Stable,1163,812543,14.3,11.9 - 12.1
+Springfield,2007,Total,15 to 34 Years,Hospital Admission,Asthma,64,47337,13.5,10.2 - 16.8,Statistically significantly higher,Stable,1099,1772535,6.2,11.9 - 12.1
+Springfield,2008,Total,Under 5 Years,Hospital Admission,Asthma,53,11268,47,34.4 - 59.7,Not statistically significantly different,Stable,1854,373123,49.7,11.9 - 12.1
+Springfield,2008,Total,5 to 14 Years,Hospital Admission,Asthma,35,23113,15.1,10.1 - 20.1,Not statistically significantly different,Stable,1217,805462,15.1,11.9 - 12.1
+Springfield,2008,Total,15 to 34 Years,Hospital Admission,Asthma,53,47584,11.1,8.1 - 14.1,Statistically significantly higher,Stable,1059,1776213,6,11.9 - 12.1
+Springfield,2009,Total,Under 5 Years,Hospital Admission,Asthma,44,11226,39.2,27.6 - 50.8,Not statistically significantly different,Stable,1513,370105,40.9,11.9 - 12.1
+Springfield,2009,Total,5 to 14 Years,Hospital Admission,Asthma,48,22820,21,15.1 - 26.9,Not statistically significantly different,Stable,1194,798382,15,11.9 - 12.1
+Springfield,2009,Total,15 to 34 Years,Hospital Admission,Asthma,74,47829,15.5,12 - 19,Statistically significantly higher,Stable,1323,1779889,7.4,11.9 - 12.1
+Springfield,2010,Total,Under 5 Years,Hospital Admission,Asthma,41,11171.09313346,36.7,25.5 - 47.9,Not statistically significantly different,Stable,1732,367071,47.2,11.9 - 12.1
+Springfield,2010,Total,5 to 14 Years,Hospital Admission,Asthma,33,22510.48484643,14.7,9.7 - 19.7,Not statistically significantly different,Stable,1156,791284.12198781,14.6,11.9 - 12.1
+Springfield,2010,Total,15 to 34 Years,Hospital Admission,Asthma,56,48063.08163301,11.7,8.6 - 14.8,Statistically significantly higher,Stable,1122,1783498.64162874,6.3,11.9 - 12.1
+Springfield,2011,Total,Under 5 Years,Hospital Admission,Asthma,30,11100.91803761,27,17.4 - 36.7,Statistically significantly lower,Stable,1599,367412.28260238,43.5,11.9 - 12.1
+Springfield,2011,Total,5 to 14 Years,Hospital Admission,Asthma,29,22579.39282791,12.8,8.2 - 17.5,Not statistically significantly different,Stable,1217,787289.05805541,15.5,11.9 - 12.1
+Springfield,2011,Total,15 to 34 Years,Hospital Admission,Asthma,38,49086.6558639,7.7,5.3 - 10.2,Not statistically significantly different,Stable,1122,1824669.31040652,6.2,11.9 - 12.1
+Springfield,2012,Total,Under 5 Years,Hospital Admission,Asthma,35,10946.64868376,32,21.4 - 42.6,Not statistically significantly different,Stable,1320,366168.9173216,36.1,11.9 - 12.1
+Springfield,2012,Total,5 to 14 Years,Hospital Admission,Asthma,26,22699.08508299,11.5,7.1 - 15.9,Not statistically significantly different,Stable,1041,786297.9727776,13.2,11.9 - 12.1
+Springfield,2012,Total,15 to 34 Years,Hospital Admission,Asthma,50,49353.41812758,10.1,7.3 - 12.9,Statistically significantly higher,Stable,1070,1849918.58528003,5.8,11.9 - 12.1
+Springfield,2013,Total,Under 5 Years,Hospital Admission,Asthma,35,10711.77210423,32.7,21.9 - 43.5,Not statistically significantly different,Stable,1041,365214.79308509,28.5,11.9 - 12.1
+Springfield,2013,Total,5 to 14 Years,Hospital Admission,Asthma,36,22871.8449753,15.7,10.6 - 20.8,Not statistically significantly different,Stable,956,786060.81695874,12.2,11.9 - 12.1
+Springfield,2013,Total,15 to 34 Years,Hospital Admission,Asthma,41,49730.62731893,8.2,5.7 - 10.7,Statistically significantly higher,Stable,924,1876487.34569377,4.9,11.9 - 12.1
+Springfield,2014,Total,Under 5 Years,Hospital Admission,Asthma,39,10456.34185398,37.3,25.6 - 49,Not statistically significantly different,Stable,1049,365159.71058863,28.7,11.9 - 12.1
+Springfield,2014,Total,5 to 14 Years,Hospital Admission,Asthma,41,22905.67678777,17.9,12.4 - 23.4,Not statistically significantly different,Stable,1022,782375.50231179,13.1,11.9 - 12.1
+Springfield,2014,Total,15 to 34 Years,Hospital Admission,Asthma,49,50333.19765767,9.7,7 - 12.4,Statistically significantly higher,Stable,1022,1900006.59823583,5.4,11.9 - 12.1
+Springfield,2015,Total,Under 5 Years,Hospital Admission,Asthma,41,10344.41205532,39.6,27.5 - 51.7,Statistically significantly higher,Stable,922,364808.5131263,25.3,11.9 - 12.1
+Springfield,2015,Total,5 to 14 Years,Hospital Admission,Asthma,55,22765.6323839,24.2,17.8 - 30.6,Statistically significantly higher,Stable,902,777942.36966322,11.6,11.9 - 12.1
+Springfield,2015,Total,15 to 34 Years,Hospital Admission,Asthma,50,50505.67132484,9.9,7.2 - 12.6,Statistically significantly higher,Stable,903,1916981.76622685,4.7,11.9 - 12.1
