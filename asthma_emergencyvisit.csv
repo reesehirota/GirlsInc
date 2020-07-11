@@ -1,0 +1,85 @@
+Geography,Year,Sex,Age Group,Outcome Type,Patient Diagnosis,Case Count,Census Population Count,Crude Rate,Confidence Intervals,Statistical Difference,Stability,State Case Count,State Census Population Count,State ,State Confidence Intervals
+Chicopee,2002,Total,Under 5 Years,Emergency Dept Visit,Asthma,48,3009,159.5,114.4 - 204.6,Not statistically significantly different,Stable,6455,391232,165,110 - 111
+Chicopee,2002,Total,5 to 14 Years,Emergency Dept Visit,Asthma,53,6887,77,56.2 - 97.7,Not statistically significantly different,Stable,6838,847946,80.6,110 - 111
+Chicopee,2003,Total,Under 5 Years,Emergency Dept Visit,Asthma,72,3020,238.4,183.3 - 293.5,Not statistically significantly different,Stable,7211,388214,185.8,110 - 111
+Chicopee,2003,Total,5 to 14 Years,Emergency Dept Visit,Asthma,51,6795,75.1,54.5 - 95.7,Not statistically significantly different,Stable,7457,840866,88.7,110 - 111
+Chicopee,2004,Total,Under 5 Years,Emergency Dept Visit,Asthma,73,3031,240.8,185.6 - 296,Statistically significantly higher,Stable,6400,385195,166.2,110 - 111
+Chicopee,2004,Total,5 to 14 Years,Emergency Dept Visit,Asthma,49,6703,73.1,52.6 - 93.6,Not statistically significantly different,Stable,6528,833785,78.3,110 - 111
+Chicopee,2005,Total,Under 5 Years,Emergency Dept Visit,Asthma,74,3043,243.2,187.8 - 298.6,Statistically significantly higher,Stable,6105,382178,159.7,110 - 111
+Chicopee,2005,Total,5 to 14 Years,Emergency Dept Visit,Asthma,34,6611,51.4,34.1 - 68.7,Statistically significantly lower,Stable,6390,826705,77.3,110 - 111
+Chicopee,2006,Total,Under 5 Years,Emergency Dept Visit,Asthma,77,3054,252.1,195.8 - 308.4,Statistically significantly higher,Stable,6830,379160,180.1,110 - 111
+Chicopee,2006,Total,5 to 14 Years,Emergency Dept Visit,Asthma,49,6517,75.2,54.1 - 96.3,Not statistically significantly different,Stable,6864,819623,83.8,110 - 111
+Chicopee,2007,Total,Under 5 Years,Emergency Dept Visit,Asthma,80,3065,261,203.8 - 318.2,Statistically significantly higher,Stable,6563,376141,174.5,110 - 111
+Chicopee,2007,Total,5 to 14 Years,Emergency Dept Visit,Asthma,63,6425,98.1,73.8 - 122.3,Not statistically significantly different,Stable,6561,812543,80.8,110 - 111
+Chicopee,2008,Total,Under 5 Years,Emergency Dept Visit,Asthma,83,3076,269.8,211.8 - 327.9,Statistically significantly higher,Stable,7395,373123,198.2,110 - 111
+Chicopee,2008,Total,5 to 14 Years,Emergency Dept Visit,Asthma,70,6333,110.5,84.6 - 136.4,Not statistically significantly different,Stable,7044,805462,87.5,110 - 111
+Chicopee,2009,Total,Under 5 Years,Emergency Dept Visit,Asthma,82,3088,265.5,208.1 - 323,Statistically significantly higher,Stable,6264,370105,169.3,110 - 111
+Chicopee,2009,Total,5 to 14 Years,Emergency Dept Visit,Asthma,97,6240,155.4,124.5 - 186.4,Statistically significantly higher,Stable,6795,798382,85.1,110 - 111
+Chicopee,2010,Total,Under 5 Years,Emergency Dept Visit,Asthma,71,3101.88956243,228.9,175.7 - 282.1,Not statistically significantly different,Stable,6537,367071,178.1,110 - 111
+Chicopee,2010,Total,5 to 14 Years,Emergency Dept Visit,Asthma,63,6155.48093351,102.3,77.1 - 127.7,Not statistically significantly different,Stable,6156,791284.12198781,77.8,110 - 111
+Chicopee,2011,Total,Under 5 Years,Emergency Dept Visit,Asthma,60,3107.47479199,193.1,144.2 - 242,Not statistically significantly different,Stable,6069,367412.28260238,165.2,110 - 111
+Chicopee,2011,Total,5 to 14 Years,Emergency Dept Visit,Asthma,82,6136.34135271,133.6,104.7 - 162.5,Statistically significantly higher,Stable,6786,787289.05805541,86.2,110 - 111
+Chicopee,2012,Total,Under 5 Years,Emergency Dept Visit,Asthma,103,3093.19837416,333,268.7 - 397.3,Statistically significantly higher,Stable,6038,366168.9173216,164.9,110 - 111
+Chicopee,2012,Total,5 to 14 Years,Emergency Dept Visit,Asthma,108,6139.82842728,175.9,142.7 - 209.1,Statistically significantly higher,Stable,6622,786297.9727776,84.2,110 - 111
+Chicopee,2013,Total,Under 5 Years,Emergency Dept Visit,Asthma,62,3074.79348219,201.6,151.5 - 251.8,Not statistically significantly different,Stable,5529,365214.79308509,151.4,110 - 111
+Chicopee,2013,Total,5 to 14 Years,Emergency Dept Visit,Asthma,62,6161.53014499,100.6,75.6 - 125.6,Not statistically significantly different,Stable,6575,786060.81695874,83.6,110 - 111
+Chicopee,2014,Total,Under 5 Years,Emergency Dept Visit,Asthma,53,3074.0307511,172.4,126 - 218.8,Not statistically significantly different,Stable,5722,365159.71058863,156.7,110 - 111
+Chicopee,2014,Total,5 to 14 Years,Emergency Dept Visit,Asthma,104,6150.62555769,169.1,136.6 - 201.6,Statistically significantly higher,Stable,7252,782375.50231179,92.7,110 - 111
+Chicopee,2015,Total,Under 5 Years,Emergency Dept Visit,Asthma,80,3061.87988117,261.3,204 - 318.6,Statistically significantly higher,Stable,5320,364808.5131263,145.8,110 - 111
+Chicopee,2015,Total,5 to 14 Years,Emergency Dept Visit,Asthma,86,6146.52867366,139.9,110.4 - 169.5,Statistically significantly higher,Stable,6461,777942.36966322,83.1,110 - 111
+Holyoke,2002,Total,Under 5 Years,Emergency Dept Visit,Asthma,101,3140,321.7,258.9 - 384.4,Statistically significantly higher,Stable,6455,391232,165,110 - 111
+Holyoke,2002,Total,5 to 14 Years,Emergency Dept Visit,Asthma,88,6467,136.1,107.7 - 164.5,Statistically significantly higher,Stable,6838,847946,80.6,110 - 111
+Holyoke,2003,Total,Under 5 Years,Emergency Dept Visit,Asthma,94,3132,300.1,239.5 - 360.8,Statistically significantly higher,Stable,7211,388214,185.8,110 - 111
+Holyoke,2003,Total,5 to 14 Years,Emergency Dept Visit,Asthma,72,6346,113.5,87.3 - 139.7,Not statistically significantly different,Stable,7457,840866,88.7,110 - 111
+Holyoke,2004,Total,Under 5 Years,Emergency Dept Visit,Asthma,111,3124,355.3,289.2 - 421.4,Statistically significantly higher,Stable,6400,385195,166.2,110 - 111
+Holyoke,2004,Total,5 to 14 Years,Emergency Dept Visit,Asthma,83,6224,133.4,104.7 - 162.1,Statistically significantly higher,Stable,6528,833785,78.3,110 - 111
+Holyoke,2005,Total,Under 5 Years,Emergency Dept Visit,Asthma,111,3116,356.2,290 - 422.5,Statistically significantly higher,Stable,6105,382178,159.7,110 - 111
+Holyoke,2005,Total,5 to 14 Years,Emergency Dept Visit,Asthma,78,6102,127.8,99.5 - 156.2,Statistically significantly higher,Stable,6390,826705,77.3,110 - 111
+Holyoke,2006,Total,Under 5 Years,Emergency Dept Visit,Asthma,129,3108,415.1,343.4 - 486.7,Statistically significantly higher,Stable,6830,379160,180.1,110 - 111
+Holyoke,2006,Total,5 to 14 Years,Emergency Dept Visit,Asthma,88,5978,147.2,116.5 - 178,Statistically significantly higher,Stable,6864,819623,83.8,110 - 111
+Holyoke,2007,Total,Under 5 Years,Emergency Dept Visit,Asthma,119,3100,383.9,314.9 - 452.9,Statistically significantly higher,Stable,6563,376141,174.5,110 - 111
+Holyoke,2007,Total,5 to 14 Years,Emergency Dept Visit,Asthma,102,5856,174.2,140.4 - 208,Statistically significantly higher,Stable,6561,812543,80.8,110 - 111
+Holyoke,2008,Total,Under 5 Years,Emergency Dept Visit,Asthma,129,3092,417.2,345.2 - 489.2,Statistically significantly higher,Stable,7395,373123,198.2,110 - 111
+Holyoke,2008,Total,5 to 14 Years,Emergency Dept Visit,Asthma,99,5735,172.6,138.6 - 206.6,Statistically significantly higher,Stable,7044,805462,87.5,110 - 111
+Holyoke,2009,Total,Under 5 Years,Emergency Dept Visit,Asthma,154,3084,499.4,420.5 - 578.3,Statistically significantly higher,Stable,6264,370105,169.3,110 - 111
+Holyoke,2009,Total,5 to 14 Years,Emergency Dept Visit,Asthma,125,5612,222.7,183.7 - 261.7,Statistically significantly higher,Stable,6795,798382,85.1,110 - 111
+Holyoke,2010,Total,Under 5 Years,Emergency Dept Visit,Asthma,159,3078.51392726,516.5,436.2 - 596.8,Statistically significantly higher,Stable,6537,367071,178.1,110 - 111
+Holyoke,2010,Total,5 to 14 Years,Emergency Dept Visit,Asthma,97,5493.03502588,176.6,141.5 - 211.7,Statistically significantly higher,Stable,6156,791284.12198781,77.8,110 - 111
+Holyoke,2011,Total,Under 5 Years,Emergency Dept Visit,Asthma,175,3058.95935068,572.1,487.3 - 656.9,Statistically significantly higher,Stable,6069,367412.28260238,165.2,110 - 111
+Holyoke,2011,Total,5 to 14 Years,Emergency Dept Visit,Asthma,114,5529.17974929,206.2,168.3 - 244,Statistically significantly higher,Stable,6786,787289.05805541,86.2,110 - 111
+Holyoke,2012,Total,Under 5 Years,Emergency Dept Visit,Asthma,175,3002.27428282,582.9,496.5 - 669.3,Statistically significantly higher,Stable,6038,366168.9173216,164.9,110 - 111
+Holyoke,2012,Total,5 to 14 Years,Emergency Dept Visit,Asthma,122,5551.66973036,219.8,180.8 - 258.8,Statistically significantly higher,Stable,6622,786297.9727776,84.2,110 - 111
+Holyoke,2013,Total,Under 5 Years,Emergency Dept Visit,Asthma,150,2946.5777163,509.1,427.6 - 590.6,Statistically significantly higher,Stable,5529,365214.79308509,151.4,110 - 111
+Holyoke,2013,Total,5 to 14 Years,Emergency Dept Visit,Asthma,131,5573.63302207,235,194.8 - 275.2,Statistically significantly higher,Stable,6575,786060.81695874,83.6,110 - 111
+Holyoke,2014,Total,Under 5 Years,Emergency Dept Visit,Asthma,138,2884.6088656,478.4,398.6 - 558.2,Statistically significantly higher,Stable,5722,365159.71058863,156.7,110 - 111
+Holyoke,2014,Total,5 to 14 Years,Emergency Dept Visit,Asthma,140,5566.40935529,251.5,209.9 - 293.2,Statistically significantly higher,Stable,7252,782375.50231179,92.7,110 - 111
+Holyoke,2015,Total,Under 5 Years,Emergency Dept Visit,Asthma,138,2848.62412615,484.4,403.6 - 565.2,Statistically significantly higher,Stable,5320,364808.5131263,145.8,110 - 111
+Holyoke,2015,Total,5 to 14 Years,Emergency Dept Visit,Asthma,158,5537.18235961,285.3,240.9 - 329.8,Statistically significantly higher,Stable,6461,777942.36966322,83.1,110 - 111
+Springfield,2002,Total,Under 5 Years,Emergency Dept Visit,Asthma,444,11521,385.4,349.5 - 421.2,Statistically significantly higher,Stable,6455,391232,165,110 - 111
+Springfield,2002,Total,5 to 14 Years,Emergency Dept Visit,Asthma,343,24864,138,123.4 - 152.6,Statistically significantly higher,Stable,6838,847946,80.6,110 - 111
+Springfield,2003,Total,Under 5 Years,Emergency Dept Visit,Asthma,535,11480,466,426.5 - 505.5,Statistically significantly higher,Stable,7211,388214,185.8,110 - 111
+Springfield,2003,Total,5 to 14 Years,Emergency Dept Visit,Asthma,416,24573,169.3,153 - 185.6,Statistically significantly higher,Stable,7457,840866,88.7,110 - 111
+Springfield,2004,Total,Under 5 Years,Emergency Dept Visit,Asthma,404,11437,353.2,318.8 - 387.6,Statistically significantly higher,Stable,6400,385195,166.2,110 - 111
+Springfield,2004,Total,5 to 14 Years,Emergency Dept Visit,Asthma,372,24281,153.2,137.6 - 168.8,Statistically significantly higher,Stable,6528,833785,78.3,110 - 111
+Springfield,2005,Total,Under 5 Years,Emergency Dept Visit,Asthma,393,11395,344.9,310.8 - 379,Statistically significantly higher,Stable,6105,382178,159.7,110 - 111
+Springfield,2005,Total,5 to 14 Years,Emergency Dept Visit,Asthma,366,23990,152.6,136.9 - 168.2,Statistically significantly higher,Stable,6390,826705,77.3,110 - 111
+Springfield,2006,Total,Under 5 Years,Emergency Dept Visit,Asthma,510,11352,449.3,410.3 - 488.3,Statistically significantly higher,Stable,6830,379160,180.1,110 - 111
+Springfield,2006,Total,5 to 14 Years,Emergency Dept Visit,Asthma,432,23696,182.3,165.1 - 199.5,Statistically significantly higher,Stable,6864,819623,83.8,110 - 111
+Springfield,2007,Total,Under 5 Years,Emergency Dept Visit,Asthma,545,11310,481.9,441.4 - 522.4,Statistically significantly higher,Stable,6563,376141,174.5,110 - 111
+Springfield,2007,Total,5 to 14 Years,Emergency Dept Visit,Asthma,408,23404,174.3,157.4 - 191.2,Statistically significantly higher,Stable,6561,812543,80.8,110 - 111
+Springfield,2008,Total,Under 5 Years,Emergency Dept Visit,Asthma,626,11268,555.6,512 - 599.1,Statistically significantly higher,Stable,7395,373123,198.2,110 - 111
+Springfield,2008,Total,5 to 14 Years,Emergency Dept Visit,Asthma,395,23113,170.9,154.1 - 187.8,Statistically significantly higher,Stable,7044,805462,87.5,110 - 111
+Springfield,2009,Total,Under 5 Years,Emergency Dept Visit,Asthma,496,11226,441.8,403 - 480.7,Statistically significantly higher,Stable,6264,370105,169.3,110 - 111
+Springfield,2009,Total,5 to 14 Years,Emergency Dept Visit,Asthma,450,22820,197.2,179 - 215.4,Statistically significantly higher,Stable,6795,798382,85.1,110 - 111
+Springfield,2010,Total,Under 5 Years,Emergency Dept Visit,Asthma,480,11171.09313346,429.7,391.2 - 468.1,Statistically significantly higher,Stable,6537,367071,178.1,110 - 111
+Springfield,2010,Total,5 to 14 Years,Emergency Dept Visit,Asthma,349,22510.48484643,155,138.8 - 171.3,Statistically significantly higher,Stable,6156,791284.12198781,77.8,110 - 111
+Springfield,2011,Total,Under 5 Years,Emergency Dept Visit,Asthma,434,11100.91803761,391,354.2 - 427.8,Statistically significantly higher,Stable,6069,367412.28260238,165.2,110 - 111
+Springfield,2011,Total,5 to 14 Years,Emergency Dept Visit,Asthma,400,22579.39282791,177.2,159.8 - 194.6,Statistically significantly higher,Stable,6786,787289.05805541,86.2,110 - 111
+Springfield,2012,Total,Under 5 Years,Emergency Dept Visit,Asthma,463,10946.64868376,423,384.4 - 461.5,Statistically significantly higher,Stable,6038,366168.9173216,164.9,110 - 111
+Springfield,2012,Total,5 to 14 Years,Emergency Dept Visit,Asthma,407,22699.08508299,179.3,161.9 - 196.7,Statistically significantly higher,Stable,6622,786297.9727776,84.2,110 - 111
+Springfield,2013,Total,Under 5 Years,Emergency Dept Visit,Asthma,384,10711.77210423,358.5,322.6 - 394.4,Statistically significantly higher,Stable,5529,365214.79308509,151.4,110 - 111
+Springfield,2013,Total,5 to 14 Years,Emergency Dept Visit,Asthma,456,22871.8449753,199.4,181.1 - 217.7,Statistically significantly higher,Stable,6575,786060.81695874,83.6,110 - 111
+Springfield,2014,Total,Under 5 Years,Emergency Dept Visit,Asthma,423,10456.34185398,404.5,366 - 443.1,Statistically significantly higher,Stable,5722,365159.71058863,156.7,110 - 111
+Springfield,2014,Total,5 to 14 Years,Emergency Dept Visit,Asthma,504,22905.67678777,220,200.8 - 239.2,Statistically significantly higher,Stable,7252,782375.50231179,92.7,110 - 111
+Springfield,2015,Total,Under 5 Years,Emergency Dept Visit,Asthma,433,10344.41205532,418.6,379.2 - 458,Statistically significantly higher,Stable,5320,364808.5131263,145.8,110 - 111
+Springfield,2015,Total,5 to 14 Years,Emergency Dept Visit,Asthma,504,22765.6323839,221.4,202.1 - 240.7,Statistically significantly higher,Stable,6461,777942.36966322,83.1,110 - 111
