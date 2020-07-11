@@ -1,0 +1,73 @@
+---
+title: "pediatric prevalence asthma"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+###Info on the data set:
+
+Pediatric Asthma Prevalence per 100 Students for Females for School Years 2009-2010 to 2016-2017
+Query: Topic: Asthma  Grade View: All Grades (ages 5-14)  Geography: Chicopee, Holyoke, Springfield  School Years: 2009-2010 to 2016-2017  Grades:   Sex: Female (Public and charter only)
+
+
+Packages to call
+```{r}
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+library(plyr)
+library(readr)
+library(readxl)
+library(naniar)
+```
+
+reading the csv into a data frame:
+```{r}
+asthma_pediatric <- read_csv("pediatric.csv")
+```
+
+renaming column names:
+```{r}
+
+names(asthma_pediatric)[1] <- "school_year"
+names(asthma_pediatric)[2] <- "gender_description"
+names(asthma_pediatric)[3] <- "geo_code"
+names(asthma_pediatric)[4] <- "geography"
+names(asthma_pediatric)[5] <- "grade_code"
+names(asthma_pediatric)[6] <- "grade_description"
+names(asthma_pediatric)[7] <- "pediatric_category_descrition"
+names(asthma_pediatric)[8] <- "student_case_count"
+names(asthma_pediatric)[9] <- "student_enrollment_count"
+names(asthma_pediatric)[10] <- "prevalence"
+names(asthma_pediatric)[11] <- "lower_CI"
+names(asthma_pediatric)[12] <- "upper_CI"
+names(asthma_pediatric)[13] <- "stat_sig"
+names(asthma_pediatric)[14] <- "stability"
+names(asthma_pediatric)[15] <- "state_student_case_count"
+names(asthma_pediatric)[16] <- "state_enrollment_count"
+names(asthma_pediatric)[17] <- "state_prevalence"
+names(asthma_pediatric)[18] <- "state_lower_CI"
+names(asthma_pediatric)[19] <- "state_upper_CI"
+```
+
+```{r}
+summary(asthma_pediatric)
+
+dim(asthma_pediatric)
+```
+
+
+```{r}
+#by prevalence
+
+ggplot(data = asthma_pediatric, mapping = aes(x = geography, y = prevalence, color = stat_sig))+
+  geom_bar(stat = "identity")+
+  ggtitle("Pediatric Asthma Prevalence")+ 
+  labs(y= "Prevalence", x = "Geographical Location", colour = "Statistical Significance")
+
+
+```
+
