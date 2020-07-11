@@ -1,0 +1,73 @@
+---
+title: "asthma emergency visit"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+###Info on the data set:
+
+Chicopee, Holyoke, Springfield
+Title: Annual Average Crude Rates of Emergency Dept Visit for Asthma per 10,000 People, 
+ for Females  for 2002 - 2015 by Community 
+
+
+Packages to call 
+```{r}
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+library(plyr)
+library(readr)
+library(readxl)
+library(naniar)
+```
+
+reading the csv into a data frame:
+```{r}
+asthma_emergency_visit <- read_csv("asthma_emergencyvisit.csv")
+```
+
+renaming column names:
+```{r}
+names(asthma_emergency_visit)[4] <- "age_group"
+names(asthma_emergency_visit)[5] <- "outcome_type"
+names(asthma_emergency_visit)[6] <- "patient_diagnosis"
+names(asthma_emergency_visit)[7] <- "case_count"
+names(asthma_emergency_visit)[8] <- "census_population_count"
+names(asthma_emergency_visit)[9] <- "crude_rate"
+names(asthma_emergency_visit)[10] <- "confidence_intervals"
+names(asthma_emergency_visit)[11] <- "statistical_difference"
+names(asthma_emergency_visit)[12] <- "stability"
+names(asthma_emergency_visit)[13] <- "state_case_count"
+names(asthma_emergency_visit)[14] <- "state_census_population_count"
+names(asthma_emergency_visit)[15] <- "state"
+names(asthma_emergency_visit)[16] <- "state_conf_intervals"
+```
+
+```{r}
+summary(asthma_emergency_visit)
+
+dim(asthma_emergency_visit)
+```
+
+
+```{r}
+#by crude_rate
+ggplot(data = asthma_emergency_visit, mapping = aes(x = Geography, y = crude_rate, color = statistical_difference))+
+  geom_bar(stat = "identity") +
+  ggtitle("Asthma Emergency Department Visits")+ 
+  labs(y= "Crude Rate", x = "Geographical Location", colour = "Statistical Significance")
+
+
+#by case_count
+ggplot(data = asthma_emergency_visit, mapping = aes(x = Geography, y = case_count, color = statistical_difference))+
+  geom_bar(stat = "identity") +
+  ggtitle("Asthma Emergency Department Visits")+ 
+  labs(y= "Case Count", x = "Geographical Location", colour = "Statistical Significance")
+
+```
+
