@@ -1,0 +1,125 @@
+---
+title: "dashboard"
+author: "Reese Hirota"
+date: "6/22/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# empty dashboard
+library("shinydashboard")
+header <- dashboardHeader(title = "Girls Inc. of the Valley")
+sidebar <- dashboardSidebar()
+body <- dashboardBody()
+# ui <- dashboardPage(header, sidebar, body)
+# server <- function(input,output) {}
+# shiny::shinyApp(ui,server)
+```
+
+```{r}
+girls_boxes <- fluidRow(
+    box(
+      title = "Youth Programs", width = 12, status = "success",
+      (tags$a(href="https://www.girlsincvalley.org/youth-programs/","Girls Inc. offers a comprehensive program designed for girls 5-12 including: Economic Literacy, Literacy Initiative, Operation SMART, and Sporting Chance."))
+    ),
+    box(
+      title = "Teen Programs", status = "warning", width = 12, (tags$a(href="http://www.girlsincvalley.org/teen-programs/", "Designed for girls 12-18, Girls Inc.'s Middle and High School Program provides girls with educational leadership opportunities in a team environment, such as: Eureka! and Leadership and Community Action."))
+    ),
+    valueBox(
+      width = 6, paste0("Donate"), (tags$a(href="https://www.girlsincvalley.org/give", "Yes, I want to help MORE girls become strong, smart, and bold!")), icon = icon(""),
+      color = "navy"
+    ), # no icon
+    
+    valueBox(
+      width = 6, paste0("Get Involved"), (tags$a(href="https://www.girlsincvalley.org/stay-connected/","Volunteer and sign up for the E-Newsletter")), icon = icon(""),
+      color = "navy"
+    ), # no icon
+    
+    valueBox(
+      width = 12, paste0("Contact Girls Inc. of the Valley"), "PO Box 6812, Holyoke, MA 01041 | Tel: (413) 532-6247 |
+Fax: (413) 532-6454", icon = icon("envelope-open-text"),
+      color = "red"
+    )
+
+  )
+```
+
+```{r}
+# body text
+
+# text for the introduction/about/info tab
+about_girls <- "Girls Inc. of the Valley currently serves 474 girls ages 5-18 from the greater Chicopee, Holyoke, and Springfield areas. This dashboard was created to demonstrate the environmental stressors girls from these areas face in their communities, which emphasize the essentiality of Girls Inc. programs. Through intentional and effective programming, both in school and after school, Girls Inc. focuses on the development of the whole girl - while helping to harness the power already within her. The combination of long-lasting mentoring relationships, a pro-girl environment, and research-based programming, equips girls to navigate gender, economic, and social barriers, and group up strong, smart, and bold."
+
+# text for the history tab
+history_stuff <- "history stuff goes here :)"
+
+
+# all the text for the data tab
+link1 <- "Massachusetts Environmental Public Health Tracking" 
+link1a <- (tags$a(href = "https://cognos10.hhs.state.ma.us/cv10pub/cgi-bin/cognos.cgi?b_action=cognosViewer&ui.action=run&ui.object=%2fcontent%2ffolder%5b%40name%3d%27MEPHTN%27%5d%2ffolder%5b%40name%3d%27health%27%5d%2freport%5b%40name%3d%27childhood-lead-poisoning%27%5d&ui.name=childhood-lead-poisoning&run.outputFormat=&run.prompt=true&cv.header=false&cv.toolbar=false#", "Lead and Data Reports"))
+link1b <- (tags$a(href = "https://matracking.ehs.state.ma.us/Health-Data/Asthma/report-choice.html", "Asthma and Data Reports"))
+
+link2 <- "Massachusetts Department of Elementary and Secondary Education"
+link2a <- (tags$a(href = "http://www.doe.mass.edu/mcas/results.html", "School and District Profiles"))
+
+link3 <- "US Census American Community Survey"
+link3a <- (tags$a(href = "https://www.arcgis.com/home/item.html?id=0e468b75bca545ee8dc4b039cbb5aff6", "ACS Poverty Status Variables"))
+link3b <- (tags$a(href = "https://www.arcgis.com/home/item.html?id=c9fcad275db846838e747e417a66ca7a"))
+
+link4 <- "Environmental Systems Research Institute"
+link4a <- (tags$a(href = "https://www.arcgis.com/home/item.html?id=e7ab0fa2d14742aea1bf6f5f0823c021", "Diversity Index"))
+
+link5 <- "Mapping Inequality buitl by the Digital Scholarship Lab in University of Richmond."
+```
+```{r}
+# add tabs
+sidebar <- dashboardSidebar(
+  sidebarMenu(
+    # tab : about girls inc
+    menuItem("About Girls Inc. of the Valley", tabName = "girls", icon = icon("heart")),
+    # tab : history of the valley
+    menuItem("History of the Valley", tabName = "history", icon = icon("book")),
+    # tab : charts from original report
+    menuItem("Overview Charts", tabName = "charts", icon = icon("chart-bar")),
+    # tab : maps from argis (new)
+    menuItem("Overview Map", icon = icon("map"), tabName = "map", badgeLabel = "interactive", badgeColor = "light-blue"),
+    # tab: sources 
+    menuItem("Data", icon = icon("table"), tabName = "data")
+    
+    # add search bar
+    # sidebarSearchForm(textId = "searchText", buttonId = "searchButton", label = "Search...")
+    
+  )
+)
+
+body <- dashboardBody(
+  # start introduction - done
+  tabItems(
+    tabItem(tabName = "girls", h1("About Girls Inc. of the Valley"),h2("Introduction"), h4(about_girls),girls_boxes),
+  # end introduction - done
+  
+  # start history - wip
+    tabItem(tabName = "history", h1("History of the Valley"),h4(history_stuff),h3("Chicopee"),h4("chicopee info"),h3("Holyoke"),h4("holyoke info"),h3("Springfield"),h4("springfield info")),
+  # end history - wip
+  
+  # start charts - wip
+    tabItem(tabName = "charts", h1("Overview Charts")),
+  # end charts - wip
+  
+  # start map - wip
+    tabItem(tabName = "map", h1("Overview Map")),
+  # end map - wip 
+  
+  # start data - done
+    tabItem(tabName = "data", h1("Sources for Data"), h3(link1), h4(link1a), h4(link1b), h3(link2), h4(link2a), h3(link3), h4(link3a), h4(link3b), h3(link4), h4(link4a), h3(link5))
+  # end data - done
+  
+  )
+)
+
+# refresh ui
+# custom color for girls inc?
+ui <- dashboardPage(skin = "black",header, sidebar, body)
+server <- function(input,output) {}
+shiny::shinyApp(ui,server)
+```
