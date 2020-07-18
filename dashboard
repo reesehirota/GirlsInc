@@ -1,0 +1,166 @@
+---
+title: "dashboard"
+author: "Reese Hirota"
+date: "6/22/2020"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r=}
+# empty dashboard
+library("shinydashboard")
+library("shiny")
+header <- dashboardHeader(title = "Girls Inc. of the Valley")
+sidebar <- dashboardSidebar()
+body <- dashboardBody()
+```
+
+```{r}
+girls_boxes <- fluidRow(
+    box(
+      title = "Youth Programs", width = 12, status = "success",
+      (HTML('<p>Girls Inc. offers a <a href="https://www.girlsincvalley.org/youth-programs/">comprehensive program</a> designed for girls 5-12 including: Economic Literacy, Literacy Initiative, Operation SMART, and Sporting Chance.</p>'))
+    ),
+    box(
+      title = "Teen Programs", status = "warning", width = 12, (HTML('<p>Designed for girls 12-18, Girls Inc.&#39;s Middle and <a href="https://www.girlsincvalley.org/teen-programs/">High School Program</a> provides girls with educational leadership opportunities in a team environment, such as: Eureka! and Leadership and Community Action.</p>'))
+    ),
+    valueBox(
+      width = 6, paste0("Donate"), (HTML('<p> Yes, I want to help <a href="https://www.girlsincvalley.org/give">MORE</a> girls become strong, smart, and bold!</p>')), icon = icon("heart"),
+      color = "teal"
+    ), # no icon
+    
+    valueBox(
+      width = 6, paste0("Get Involved"),  (tags$a(href="https://www.girlsincvalley.org/stay-connected/","Volunteer and sign up for the E-Newsletter")), icon = icon(""),
+      color = "navy"
+    ), # no icon
+    
+    valueBox(
+      width = 12, paste0("Contact Girls Inc. of the Valley"), "PO Box 6812, Holyoke, MA 01041 | Tel: (413) 532-6247 |
+Fax: (413) 532-6454", icon = icon("envelope-open-text"),
+      color = "red"
+    )
+
+  )
+```
+
+```{r}
+# body text
+
+# html for space 
+return <- HTML('<p>&nbsp;</p>')
+
+# text for the introduction/about/info tab
+about_girls <- "Girls Inc. of the Valley currently serves 474 girls ages 5-18 from the greater Chicopee, Holyoke, and Springfield areas. This dashboard was created to demonstrate the environmental stressors girls from these areas face in their communities, which emphasize the essentiality of Girls Inc. programs. Through intentional and effective programming, both in school and after school, Girls Inc. focuses on the development of the whole girl - while helping to harness the power already within her. The combination of long-lasting mentoring relationships, a pro-girl environment, and research-based programming, equips girls to navigate gender, economic, and social barriers, and group up strong, smart, and bold."
+
+# text for the history tab
+history_stuff <- "history stuff goes here :)"
+
+
+# all the text for the data tab
+data_html <- HTML('<p>Massachusetts Environmental Public Health Tracking</p>
+
+<ul>
+	<li><a href="https://cognos10.hhs.state.ma.us/cv10pub/cgi-bin/cognos.cgi?b_action=cognosViewer&amp;ui.action=run&amp;ui.object=%2fcontent%2ffolder%5b%40name%3d%27MEPHTN%27%5d%2ffolder%5b%40name%3d%27health%27%5d%2freport%5b%40name%3d%27childhood-lead-poisoning%27%5d&amp;ui.name=childhood-lead-poisoning&amp;run.outputFormat=&amp;run.prompt=true&amp;cv.header=false&amp;cv.toolbar=false#">Lead and Data Reports</a></li>
+	<li><a href="https://matracking.ehs.state.ma.us/Health-Data/Asthma/report-choice.html">Asthma and Data Reports</a></li>
+</ul>
+
+<p>Massachusetts Department of Elementary and Secondary Education</p>
+
+<ul>
+	<li><a href="http://www.doe.mass.edu/mcas/results.html">School and District Profiles</a></li>
+</ul>
+
+<p><a href="https://www.census.gov/programs-surveys/acs/data.html">US Census American Community Survey</a>&nbsp;(including&nbsp;<a href="https://www.arcgis.com/home/item.html?id=0e468b75bca545ee8dc4b039cbb5aff6">ACS Poverty Status Variables</a> and <a href="https://www.arcgis.com/home/item.html?id=c9fcad275db846838e747e417a66ca7a">Socioeconomic Status (NSES) Index</a>)</p>
+
+
+<p><a href="https://www.esri.com/en-us/home">Environmental Systems Research Institute</a>&nbsp;(including <a href="https://www.arcgis.com/home/item.html?id=e7ab0fa2d14742aea1bf6f5f0823c021">Diversity Index</a>)</p>
+
+<p>Mapping Inequality built&nbsp;by the Digital Scholarship Lab in University of Richmond.&nbsp;</p>')
+```
+
+
+```{r}
+# chart html 
+chart_html <- HTML('<h3>Average Annual Prevalence of Males and Females with Estimated Confirmed Blood <span style="color:#a87000"><strong>Lead Levels</strong></span>&nbsp;&ge;5&nbsp;&mu;g/dL in 2012-2017 that were between 9-&lt;48 Months of age.</h3>
+<p><em>Massachusetts Environmental Public Health Tracking</em></p>
+<p>It is important to note that the Center for Disease Control has set the upper limit for blood lead for children at 5&nbsp;&mu;g/dL, which this data set aims to reflect. At the community level, from 2012 through 2017, Springfield in particular consistenly had a statistically significantly higher lead levels than other Massachusetts communities. Holyoke too had some counts of statistically significantly igher lead levels, though the majority of counts were not statistically significant. Chicopee fared the best of these cities, with lead levels either not statistically significant, or occasionally statistically significantly lower.&nbsp;</p>
+<p><img alt="meph" src="https://i.ibb.co/JFthWXj/leadlevels.png" /></p>
+
+<h3><span style="color:#4c7300"><strong>Asthma</strong> <strong>Hospitalizations</strong></span>/ER Visits and <span style="color:#4c7300"><strong>Pediatric Asthma Prevalence</strong></span></h3>
+<p><em>Massachusetts Environmental Public Health Tracking</em></p>
+<p>Three data sets involving the communites Girls Inc. serves (Chicopee, Holyoke, and Springfield)&nbsp;were explored: asthma hospitalizations from 2000-2015, ER visits due to asthma from 2000-2015, and pediatric prevalence per 100 students for females aged 5-14, for the school years 2009-2010 to 2016-2017.</p>
+<p>All three cities have significantly higher asthma-related hospitalization rates (crude) in citywide comparison to the rest of Massachusetts, for both males and females from the ages of under 5 to 34 years. Springfield has a higher rate of asthma hospitalization amongst these cities. These communities also have significantly higher asthma-related emergency department visit rates (crude) for both males and females from under 5 years of age to 34 years of age, and significantly higher pediatric asthma prevalence in kindergarten to 8th grade students (females aged 5 to 14 years) relative to Massachusetts, with Holyoke having the greatest proportion of the three for both figures.</p>
+<p><img alt="" src="https://i.ibb.co/9VQMCM0/asthma0.png" /><img alt="" src="https://i.ibb.co/QkLgt49/asthma1.png" /><img alt="" src="https://i.ibb.co/F7zN14M/asthma3.png" /></p>
+
+<h3>Median<span style="color:#4c0073"><strong> Household Income</strong></span> and <strong><span style="color:#4c0073">Female Poverty Rates</span></strong> From 2014-2018</h3>
+<p><em>US Cenusus American Community Survey</em></p>
+<p>From the US Census American Community Survey 5-Year Data, the data was filtered to the zip codes from which 79% of Girls Inc. members resided (01040, 01013, 01104, 01109, and 01107), &nbsp;composing mostly of the cities of Holyoke, Chicopee, and Springfield. Zip code areas with less than 20 Girls Inc. members were excluded from visualizations for clarity. Two datasets were provided: median household income of the five zip codes compared to the rest of Hampden County and Massachusetts, and female poverty rates for populations aged 5-17 of the five zip codes compared to the rest of Hampden County and Massachusetts. This data provides insight into the lasting impacts of redlining in the area.&nbsp;</p>
+<p>All five zip codes representing a majority of Girls Inc. members have a considerably smaller median household income than the rest of Hampden County and Massachusetts. The zip codes belonging to Springfield (01104, 01107, and 01109), reperesenting 31% of Girls Inc. members, have the smallest median household income.&nbsp;</p>
+<p>All five zip codes representing a majority of Girls Inc. members have a considerably higher rate of female poverty among those aged 5-17 than the rest of Hampden County and Massachusetts. The Springfield zip code of 01107, representing 12% of Girls Inc. members, has the highest rate of female poverty within this age range.&nbsp;</p>
+<p><img alt="acs" src="https://i.ibb.co/rskMktV/censusmedhi.png" /></p>
+<p><img alt="acs" src="https://i.ibb.co/5hFyPvt/censusfpov.png" /></p>
+
+<h3>Girls&#39; MCAS Scores in 2019 for Springfield, Holyoke, and Chicopee</h3>
+<p><em>Massachusetts Department of Elementary and Secondary Education</em></p>
+<p>The Massachusetts Comprehensive Assessment System or MCAS are the state mandated exams given once a year for grades 3 through 8 once and once in high school for grade 10 as part of the state graduation requirement. There are 4 grades on the exam: Exceeding Expectations, Meeting Expectations, Partially Meeting Expectations, and Not Meeting Expectations.&nbsp;</p>
+<p>On average most girls in these districts are not meeting expectations regardless of subject matter or grade level. The math scores are particularly concerning as they illustrate not only low scores but declining scores.&nbsp;</p>
+<p><img alt="mcas" src="https://i.ibb.co/kmNdD9p/mcas.png" style="height:289px; width:481px" /></p>')
+```
+
+
+
+```{r}
+# add tabs
+sidebar <- dashboardSidebar(
+  sidebarMenu(
+    # tab : about girls inc
+    menuItem("About Girls Inc. of the Valley", tabName = "girls", icon = icon("heart")),
+    # tab : history of the valley
+    menuItem("History of the Valley", tabName = "history", icon = icon("book")),
+    # tab : charts from original report
+    menuItem("Overview Charts", tabName = "charts", icon = icon("chart-bar")),
+    # tab : maps from argis (new)
+    menuItem("Overview Map", icon = icon("map"), tabName = "map", badgeLabel = "interactive", badgeColor = "light-blue"),
+    # tab: sources 
+    menuItem("Data", icon = icon("table"), tabName = "data")
+    
+    # add search bar
+    # sidebarSearchForm(textId = "searchText", buttonId = "searchButton", label = "Search...")
+    
+  )
+)
+
+body <- dashboardBody(
+  # start introduction - done
+  tabItems(
+    tabItem(tabName = "girls", h1("About Girls Inc. of the Valley"),h2("Introduction"), h4(about_girls),girls_boxes),
+  # end introduction - done
+  
+  # start history - wip
+    tabItem(tabName = "history", h1("History of the Valley"),h4(history_stuff),h3("Chicopee"),h4("chicopee info"),h3("Holyoke"),h4("holyoke info"),h3("Springfield"),h4("springfield info")),
+  # end history - wip
+  
+  # start charts - wip
+    tabItem(tabName = "charts", h1("Overview Charts"), chart_html),
+  # end charts - wip
+  
+  # start map - wip
+    tabItem(tabName = "map", h1("Overview Map")),
+  # end map - wip 
+  
+  # start data - done
+    tabItem(tabName = "data", h1("Sources for Data"), data_html)
+  # end data - done
+  
+  )
+)
+
+# refresh ui
+# custom color for girls inc?
+ui <- dashboardPage(skin = "black", header, sidebar, body)
+server <- function(input,output) {}
+shiny::shinyApp(ui,server)
+```
+
+
