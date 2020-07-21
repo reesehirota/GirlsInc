@@ -1,0 +1,213 @@
+---
+title: "shinyshinyshiny"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(shinydashboard)
+library(shiny)
+```
+
+```{r}
+ui <- dashboardPage(
+  skin = "black",
+  dashboardHeader(title = "Girls Inc. of the Valley"
+                  #, dropdownMenu(type = "messages",
+                             #  messageItem(
+                              #   from = "Maha",
+                              #   message = "Is this working?"
+                              # ))
+                  ),
+  dashboardSidebar(
+    sidebarMenu(
+      menuItem("Girls Inc. of the Valley", tabName = "about", icon = icon("th")), #figure out how to put Girls Inc logo in icon
+      menuItem("Springfield", tabName = "springfield", icon = icon("city")),
+      menuItem("Holyoke", tabName = "holyoke", icon = icon("city")),
+      menuItem("Chicopee", tabName = "chicopee", icon = icon("city")),
+      menuItem("Maps", tabName = "maps", icon = icon("map"))
+     # menuItem("", tabName = "", icon = icon("city")),
+    )
+  ),
+  dashboardBody(
+    tabItems(
+      tabItem(tabName = "about",
+              "Girls Inc. empowers, educates, and guides girls forward, helping them navigate the challenges in their lives. Through intentional and effective programming, both in school and after school, we focus on the development of the whole girl – while helping to harness the power already within her. The combination of long-lasting mentoring relationships, a pro-girl environment, and research-based programming equips girls to navigate gender, economic, and social barriers, and grow up healthy, educated, and independent. This dashboard was made by Reese Hirota and Maha Mapara to display data relating to the demographics of participants in Girls Inc. programs."),
+      tabItem(tabName = "springfield",
+              "Founded in 1636 as the first Springfield in the New World, during the American Revolution, George Washington designated it as the site of the Springfield Armory for its central location, subsequently the site of Shays' Rebellion. The city would also play a pivotal role in the Civil War, as a stop on the Underground Railroad and home of abolitionist John Brown, widely known for his raid on Harpers Ferry, and for the Armory's manufacture of the famed ''Springfield rifles'' used ubiquitously by Union troops. Springfield has several nicknames—''The City of Firsts'', due to the many innovations developed there, such as the first American dictionary, the first American gas-powered automobile, and the first machining lathe for interchangeable parts; ''The City of Homes'', due to its Victorian residential architecture; and ''Hoop City'', as basketball—one of the world's most popular sports—was invented in Springfield in 1891 by James Naismith. "),
+      tabItem(tabName = "holyoke",
+              "Holyoke, a city in Massachusetts Hampden County, is among the early planned industrial cities in the United States. Built in tandem with the Holyoke Dam to utilize the water power of Hadley Falls, it is one of a handful of cities in New England built on the grid plan. During the late 19th century the city produced an estimated 80% of the writing paper used in the United States and was home to the largest paper mill architectural firm in the country, as well as the largest paper, silk, and alpaca wool mills in the world.] Although a considerably smaller number of businesses in Holyoke work in the paper industry today, it is still commonly referred to as ''The Paper City''. Today the city contains a number of specialty manufacturing companies, as well as the Massachusetts Green High Performance Computing Center, an intercollegiate research facility which opened in 2012. Holyoke is also home to the Volleyball Hall of Fame and known as the ''Birthplace of Volleyball'', as the internationally played Olympic sport was invented and first played at the local YMCA chapter by William G. Morgan in 1895."),
+      tabItem(tabName = "chicopee",
+              "Chicopee is a city located on the Connecticut River in Hampden County, Massachusetts.One of the ventures of the Boston Associates, Chicopee is a city built around several smaller former mill communities on its namesake, the Chicopee River. During the 19th century, the city was home to the first American producer of friction matches as well as a variety of other industries, including the Ames Manufacturing Company, an early pioneer in machining lathes, building upon the work of Springfield's Thomas Blanchard, and the largest producer of swords and cutlasses for the Union Army during the Civil War. By the start of the 20th century, the city was home to a number of industrial plants, including those of the Fisk Tire Company, one of the largest tire makers of that time, and some of the earliest sporting goods factories of A. G. Spalding.
+Today the city is home to a variety of specialty manufacturers, as well as Westover Air Reserve Base, the largest Air Force Reserve Base of the United States, built in 1940 with the emergence of World War II. Chicopee today goes by the nickname the ''Crossroads of New England'' as part of a business-development marketing campaign, one that West Springfield also uses. The name reflects the city's location among a number of metropolitan areas and its transportation network. "),
+      tabItem(tabName = "maps")
+    ),
+    tabBox(
+      title = "Girls Inc. of the Valley",
+      tabPanel("About", "Girls Inc. empowers, educates, and guides girls forward, helping them navigate the challenges in their lives. Through intentional and effective programming, both in school and after school, we focus on the development of the whole girl – while helping to harness the power already within her. The combination of long-lasting mentoring relationships, a pro-girl environment, and research-based programming equips girls to navigate gender, economic, and social barriers, and grow up healthy, educated, and independent. This dashboard was made by Reese Hirota and Maha Mapara to display data relating to the demographics of participants in Girls Inc. programs."),
+      tabPanel("Donate", "donation info")
+    )
+  )
+)
+
+ui
+
+
+```
+
+```{r}
+# header <- dashboardHeader(title = "Girls Inc. of the Valley")
+# 
+# sidebar <- dashboardSidebar( 
+#   sidebarMenu(
+#       menuItem("Girls Inc. of the Valley", tabName = "about", icon = icon("th")), #figure out how to put Girls Inc logo in icon
+#       menuItem("Springfield", tabName = "springfield", icon = icon("city")),
+#       menuItem("Holyoke", tabName = "holyoke", icon = icon("city")),
+#       menuItem("Chicopee", tabName = "chicopee", icon = icon("city")),
+#       menuItem("Charts", tabName = "charts", icon = icon("chart-bar")),
+#       menuItem("Maps", tabName = "maps", icon = icon("map"))),
+#       menuItem("Data", tabName = "data", icon = icon("table"))
+#   )
+# 
+# body <- dashboardBody(
+#   fluidRow(
+#     tabBox(
+#       title = "Girls Inc. of the Valley", #can this tab box be coloured???
+#       # The id lets us use input$tabset1 on the server to find the current tab
+#       id = "tabset1", height = "500px", width = "500px",
+#       tabPanel("About", "Girls Inc. empowers, educates, and guides girls forward, helping them navigate the challenges in their lives. Through intentional and effective programming, both in school and after school, we focus on the development of the whole girl – while helping to harness the power already within her. The combination of long-lasting mentoring relationships, a pro-girl environment, and research-based programming equips girls to navigate gender, economic, and social barriers, and grow up healthy, educated, and independent."),
+#       tabPanel("What this dashabord is about", "This dashboard was made by Reese Hirota and Maha Mapara to display data relating to the demographics of participants in Girls Inc. programs."),
+#       tabPanel("Donate", "donation details")
+#     )
+#     # tabBox(
+#     #   side = "right", height = "250px",
+#     #   selected = "Tab3",
+#     #   tabPanel("Tab1", "Tab content 1"),
+#     #   tabPanel("Tab2", "Tab content 2"),
+#     #   tabPanel("Tab3", "Note that when side=right, the tab order is reversed.")
+#     # )
+#   )
+#   #fluidRow(
+#    # tabBox(
+#       # Title can include an icon
+#       # title = tagList(shiny::icon("gear"), "tabBox status"),
+#       # tabPanel("Tab1",
+#       #   "Currently selected tab from first box:",
+#       #   verbatimTextOutput("tabset1Selected")
+#       # ),
+#       # tabPanel("Tab2", "Tab content 2")
+#   )
+# 
+# shinyApp(
+#   ui = dashboardPage(
+#     skin = "black",
+#     header,
+#     sidebar,
+#     body
+#   ),
+#   server = function(input, output) {
+#     # The currently selected tab from the first box
+#     output$tabset1Selected <- renderText({
+#       input$tabset1
+#     })
+#   })
+```
+```{r}
+about_girls <- "Girls Inc. empowers, educates, and guides girls forward, helping them navigate the challenges in their lives. Through intentional and effective programming, both in school and after school, we focus on the development of the whole girl – while helping to harness the power already within her. The combination of long-lasting mentoring relationships, a pro-girl environment, and research-based programming equips girls to navigate gender, economic, and social barriers, and grow up healthy, educated, and independent. This dashboard was made by Reese Hirota and Maha Mapara to display data relating to the demographics of participants in Girls Inc. programs."
+
+history_stuff <- "Western Massachusetts is a region in Massachusetts, one of the six U.S. states that make up the New England region of the United States. Western Massachusetts has diverse topography; 22 colleges and universities, with approximately 100,000 students;[1][dead link] and such institutions as Tanglewood, the Springfield Armory, and Jacob's Pillow."
+
+springfield_history <- "Founded in 1636 as the first Springfield in the New World, during the American Revolution, George Washington designated it as the site of the Springfield Armory for its central location, subsequently the site of Shays' Rebellion. The city would also play a pivotal role in the Civil War, as a stop on the Underground Railroad and home of abolitionist John Brown, widely known for his raid on Harpers Ferry, and for the Armory's manufacture of the famed ''Springfield rifles'' used ubiquitously by Union troops. Springfield has several nicknames—''The City of Firsts'', due to the many innovations developed there, such as the first American dictionary, the first American gas-powered automobile, and the first machining lathe for interchangeable parts; ''The City of Homes'', due to its Victorian residential architecture; and ''Hoop City'', as basketball—one of the world's most popular sports—was invented in Springfield in 1891 by James Naismith. "
+  
+chicopee_history <- "Chicopee is a city located on the Connecticut River in Hampden County, Massachusetts.One of the ventures of the Boston Associates, Chicopee is a city built around several smaller former mill communities on its namesake, the Chicopee River. During the 19th century, the city was home to the first American producer of friction matches as well as a variety of other industries, including the Ames Manufacturing Company, an early pioneer in machining lathes, building upon the work of Springfield's Thomas Blanchard, and the largest producer of swords and cutlasses for the Union Army during the Civil War. By the start of the 20th century, the city was home to a number of industrial plants, including those of the Fisk Tire Company, one of the largest tire makers of that time, and some of the earliest sporting goods factories of A. G. Spalding.
+Today the city is home to a variety of specialty manufacturers, as well as Westover Air Reserve Base, the largest Air Force Reserve Base of the United States, built in 1940 with the emergence of World War II. Chicopee today goes by the nickname the ''Crossroads of New England'' as part of a business-development marketing campaign, one that West Springfield also uses. The name reflects the city's location among a number of metropolitan areas and its transportation network. "
+  
+holyoke_history <- "Holyoke, a city in Massachusetts Hampden County, is among the early planned industrial cities in the United States. Built in tandem with the Holyoke Dam to utilize the water power of Hadley Falls, it is one of a handful of cities in New England built on the grid plan. During the late 19th century the city produced an estimated 80% of the writing paper used in the United States and was home to the largest paper mill architectural firm in the country, as well as the largest paper, silk, and alpaca wool mills in the world.] Although a considerably smaller number of businesses in Holyoke work in the paper industry today, it is still commonly referred to as ''The Paper City''. Today the city contains a number of specialty manufacturing companies, as well as the Massachusetts Green High Performance Computing Center, an intercollegiate research facility which opened in 2012. Holyoke is also home to the Volleyball Hall of Fame and known as the ''Birthplace of Volleyball'', as the internationally played Olympic sport was invented and first played at the local YMCA chapter by William G. Morgan in 1895."
+
+sp_dem <- "As of the 2010 Census, the city's population was 153,060. By race, the city has a 31.7% White population, 20.9% Black population, 44.7% Hispanic or Latino population, 2.2% Asian population and 0.4% Native American population."
+
+chic_dem <- "The city's estimated population was 55,126. By race, the city has a 71.4% White population, 4.9% Black population, 20.6% Hispanic or Latino population, 2.1% Asian population, and 0.1% Native American population."
+
+hol_dem <- "The city's estimated population is 40,117. By race, the city has a 41.9% White population, 4.5% Black population, 52.1% Hispanic or Latino population, 1.3% Asian population, 0.4% Native American population, and 0.1% Native Hawaiian and Other Pacific Islander population."
+```
+
+
+```{r}
+sidebar <- dashboardSidebar(
+  sidebarMenu(
+    # tab : about girls inc
+    menuItem("About Girls Inc. of the Valley", tabName = "girls", icon = icon("heart")),
+    
+    # tab : history of the valley
+    
+    #need to bunch them together under one Western Mass tab------how to do this
+    menuItem("Springfield", tabName = "springfield", icon = icon("book")),
+    menuItem("Chicopee", tabName = "chicopee", icon = icon("book")),
+    menuItem("Holyoke", tabName = "holyoke", icon = icon("book")),
+    menuItem("History of redlining in the Pioneer Valley", tabName = "redlining", icon = icon("map")),
+    # tab : charts from original report
+    menuItem("Charts", tabName = "charts", icon = icon("chart-bar")),
+    # tab : maps from argis (new)
+    menuItem("Maps", icon = icon("map"), tabName = "maps", badgeLabel = "interactive", badgeColor = "light-blue"),
+    # tab: sources 
+    menuItem("Data", icon = icon("table"), tabName = "data")
+  )
+)
+    
+
+
+body <- dashboardBody(
+  tabItems(
+    tabItem(tabName = "girls", h1("About Girls Inc. of the Valley"),h4(about_girls),girls_boxes),
+    tabItem(tabName = "springfield", h2("Springfield"),h4(springfield_history), h2("Population Demographics"), h4(sp_dem)), 
+    tabItem(tabName = "chicopee", h2("Chicopee"),h4(chicopee_history), h2("Population Demographics"), h4(chic_dem)), 
+    tabItem(tabName = "holyoke", h2("Holyoke"), h4(holyoke_history), h2("Population Demographics"), h4(hol_dem)),
+    
+    #how to embed the maps??
+    
+    tabItem(tabName = "redlining", h2("History of redlining in the Pioneer Valley"), h4("Redlining in Springfield"), h5("embed Springfield map from mapping inequalities here"), h4("Redlining in Holyoke/Chicopee"), h5("embed Holyoke/Chicopee maps from mapping inequalities here")),
+    tabItem(tabName = "charts", h2("lets put charts here")),
+    tabItem(tabName = "maps", h2("lets put maps here :)")),
+    tabItem(tabName = "data", h2("Sources for data used to create charts and maps"))
+  )
+)
+```
+
+```{r}
+ui <- dashboardPage(skin = "black",header, sidebar, body)
+server <- function(input,output) {}
+shinyApp(ui, server)
+```
+
+
+```{r}
+# sidebar <- dashboardSidebar(
+#   sidebarMenu(
+#     menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
+#     menuItem("Widgets", icon = icon("th"), tabName = "widgets",
+#              badgeLabel = "new", badgeColor = "green")
+#   )
+# )
+# 
+# body <- dashboardBody(
+#   tabItems(
+#     tabItem(tabName = "dashboard",
+#       h2("Dashboard tab content")
+#     ),
+# 
+#     tabItem(tabName = "widgets",
+#       h2("Widgets tab content")
+#     )
+#   )
+# )
+# 
+# # Put them together into a dashboardPage
+# dashboardPage(
+#   dashboardHeader(title = "Simple tabs"),
+#   sidebar,
+#   body
+# )
+```
