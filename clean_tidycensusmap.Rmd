@@ -1,0 +1,79 @@
+---
+title: "Clean tidycensus maps"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+#packages needed
+```{r}
+library(tidycensus)
+#library(tidyverse)
+library(tmap)
+library(tmaptools)
+library(sf)
+library(ggplot2)
+library(dplyr)
+library(mapview)
+library(tigris)
+library(leaflet)
+```
+
+###Race###
+
+map for race in Hampden county by tract
+```{r}
+#getting all the variables for race from census
+racevars <- c(White = "B02001_002", 
+              Black = "B02001_003", 
+              Asian = "B02001_005", 
+              Hispanic = "B03002_001",
+              Native_american = "B02001_004",
+              Native_hawaian = "B02001_006",
+              someOtherRace = "B02001_007")
+
+race_tract <- get_acs(geography = "tract", variables = racevars, 
+                  state = "MA", county = "Hampden County", geometry = TRUE,
+                  summary_var = "B01003_001")  #what is the summary variable again
+
+county_race_map <- race_tract %>%
+                      mutate(pct = 100 * (estimate /summary_est)) %>% #moe in the df is margin of error
+                      ggplot(aes(fill = pct)) + #is a continuous scale so can't have discrete values
+                      facet_wrap(~variable) +
+                      geom_sf(color = NA) +
+                      coord_sf(crs = 26918) + 
+                      scale_fill_viridis_c()
+
+class(county_race_map)
+
+county_race_map
+
+```
+
+map for race by place- problem is that place is available by state, not county so we get map of the entire state- not helpful
+```{r}
+race_place <- get_acs(geography = "place", variables = racevars, 
+                  state = "MA", geometry = TRUE,
+                  summary_var = "B01003_001")  #what is the summary variable again
+
+race_place %>%
+  mutate(pct = 100 * (estimate /summary_est)) %>% #moe in the df is margin of error
+  ggplot(aes(fill = pct)) + #is a continuous scale so can't have discrete values
+  facet_wrap(~variable) +
+  geom_sf(color = NA) +
+  coord_sf(crs = 26918) + 
+  scale_fill_viridis_c()
+
+```
+
+race maps with cities more clear
+```{r}
+
+```
+
+
+###Income###
+
