@@ -115,10 +115,44 @@ ui
 #     })
 #   })
 ```
+
+Reese's code:
+
+```{r}
+girls_boxes <- fluidRow(
+    box(
+      title = "Youth Programs", width = 12, status = "success",
+      (tags$a(href="https://www.girlsincvalley.org/youth-programs/","Girls Inc. offers a comprehensive program designed for girls 5-12 including: Economic Literacy, Literacy Initiative, Operation SMART, and Sporting Chance."))
+    ),
+    box(
+      title = "Teen Programs", status = "warning", width = 12, (tags$a(href="http://www.girlsincvalley.org/teen-programs/", "Designed for girls 12-18, Girls Inc.'s Middle and High School Program provides girls with educational leadership opportunities in a team environment, such as: Eureka! and Leadership and Community Action."))
+    ),
+    valueBox(
+      width = 6, paste0("Donate"), (tags$a(href="https://www.girlsincvalley.org/give", "Yes, I want to help MORE girls become strong, smart, and bold!")), icon = icon(""),
+      color = "navy"
+    ), # no icon
+    
+    valueBox(
+      width = 6, paste0("Get Involved"), (tags$a(href="https://www.girlsincvalley.org/stay-connected/","Volunteer and sign up for the E-Newsletter")), icon = icon(""),
+      color = "navy"
+    ), # no icon
+    
+    valueBox(
+      width = 12, paste0("Contact Girls Inc. of the Valley"), "PO Box 6812, Holyoke, MA 01041 | Tel: (413) 532-6247 |
+Fax: (413) 532-6454", icon = icon("envelope-open-text"),
+      color = "red"
+    )
+
+  )
+```
+
+
 ```{r}
 about_girls <- "Girls Inc. empowers, educates, and guides girls forward, helping them navigate the challenges in their lives. Through intentional and effective programming, both in school and after school, we focus on the development of the whole girl – while helping to harness the power already within her. The combination of long-lasting mentoring relationships, a pro-girl environment, and research-based programming equips girls to navigate gender, economic, and social barriers, and grow up healthy, educated, and independent. This dashboard was made by Reese Hirota and Maha Mapara to display data relating to the demographics of participants in Girls Inc. programs."
 
 history_stuff <- "Western Massachusetts is a region in Massachusetts, one of the six U.S. states that make up the New England region of the United States. Western Massachusetts has diverse topography; 22 colleges and universities, with approximately 100,000 students;[1][dead link] and such institutions as Tanglewood, the Springfield Armory, and Jacob's Pillow."
+
+#my starts here
 
 springfield_history <- "Founded in 1636 as the first Springfield in the New World, during the American Revolution, George Washington designated it as the site of the Springfield Armory for its central location, subsequently the site of Shays' Rebellion. The city would also play a pivotal role in the Civil War, as a stop on the Underground Railroad and home of abolitionist John Brown, widely known for his raid on Harpers Ferry, and for the Armory's manufacture of the famed ''Springfield rifles'' used ubiquitously by Union troops. Springfield has several nicknames—''The City of Firsts'', due to the many innovations developed there, such as the first American dictionary, the first American gas-powered automobile, and the first machining lathe for interchangeable parts; ''The City of Homes'', due to its Victorian residential architecture; and ''Hoop City'', as basketball—one of the world's most popular sports—was invented in Springfield in 1891 by James Naismith. "
   
@@ -137,25 +171,43 @@ hol_dem <- "The city's estimated population is 40,117. By race, the city has a 4
 
 ```{r}
 sidebar <- dashboardSidebar(
+  width = 350,
   sidebarMenu(
     # tab : about girls inc
-    menuItem("About Girls Inc. of the Valley", tabName = "girls", icon = icon("heart")),
+    menuItem("About Girls Inc. of the Valley", tabName = "girls", icon = icon("th")),
     
-    # tab : history of the valley
     
-    #need to bunch them together under one Western Mass tab------how to do this
-    menuItem("Springfield", tabName = "springfield", icon = icon("book")),
-    menuItem("Chicopee", tabName = "chicopee", icon = icon("book")),
-    menuItem("Holyoke", tabName = "holyoke", icon = icon("book")),
+    # tab : history of the valley. cities available individually under dropdown
+    menuItem("History of the Pioneer Valley/Western Massachussetts", tabName = "history", icon = icon("book"),
+             menuSubItem("Springfield", tabName = "springfield", icon = icon("book")),
+             menuSubItem("Chicopee", tabName = "chicopee", icon = icon("book")),
+             menuSubItem("Holyoke", tabName = "holyoke", icon = icon("book"))),
+    
+    
+    #menuItem("Springfield", tabName = "springfield", icon = icon("book")),
+    #menuItem("Chicopee", tabName = "chicopee", icon = icon("book")),
+    #menuItem("Holyoke", tabName = "holyoke", icon = icon("book")),
+    
+    # tab : redlining maps from mapping inequalities website
+    
     menuItem("History of redlining in the Pioneer Valley", tabName = "redlining", icon = icon("map")),
+   
     # tab : charts from original report
     menuItem("Charts", tabName = "charts", icon = icon("chart-bar")),
-    # tab : maps from argis (new)
-    menuItem("Maps", icon = icon("map"), tabName = "maps", badgeLabel = "interactive", badgeColor = "light-blue"),
+    
+    
+    
+    # tab : drop down menu for interactive and static maps
+    
+    menuItem("Maps", tabName = "maps", icon = icon("map"), #badgeLabel = "interactive", badgeColor = "light-blue",
+             menuSubItem("Static Maps", tabName = "static",  icon = icon("map")),
+             menuSubItem("Interactive Maps", tabName = "interactive", icon = icon("map"))),
+   
     # tab: sources 
-    menuItem("Data", icon = icon("table"), tabName = "data")
+    menuItem("Sources", icon = icon("table"), tabName = "data")
   )
 )
+
     
 
 
@@ -168,16 +220,18 @@ body <- dashboardBody(
     
     #how to embed the maps??
     
-    tabItem(tabName = "redlining", h2("History of redlining in the Pioneer Valley"), h4("Redlining in Springfield"), h5("embed Springfield map from mapping inequalities here"), h4("Redlining in Holyoke/Chicopee"), h5("embed Holyoke/Chicopee maps from mapping inequalities here")),
-    tabItem(tabName = "charts", h2("lets put charts here")),
-    tabItem(tabName = "maps", h2("lets put maps here :)")),
-    tabItem(tabName = "data", h2("Sources for data used to create charts and maps"))
+    tabItem(tabName = "redlining", h2("History of redlining in the Pioneer Valley"), h4("Redlining in Springfield"), h5("embed Springfield map from  mapping inequalities here"), h4("Redlining in Holyoke/Chicopee"), h5("embed Holyoke/Chicopee maps from mapping inequalities here")),
+    tabItem(tabName = "charts", h2("charts go here")),
+    tabItem(tabName = "maps", h2("maps go here")),
+    tabItem(tabName = "static", h4("this is where all static maps will go")),
+    tabItem(tabName = "interactive", h4("this is where all interactive maps will go")),
+    tabItem(tabName = "data", h2("Sources for data used to create charts and maps"), h4("mass.gov data pages and attach data files used"))
   )
 )
 ```
 
 ```{r}
-ui <- dashboardPage(skin = "black",header, sidebar, body)
+ui <- dashboardPage(skin = "yellow",header, sidebar, body)
 server <- function(input,output) {}
 shinyApp(ui, server)
 ```
