@@ -222,12 +222,42 @@ body <- dashboardBody(
     
     tabItem(tabName = "redlining", h2("History of redlining in the Pioneer Valley"), h4("Redlining in Springfield"), h5("embed Springfield map from  mapping inequalities here"), h4("Redlining in Holyoke/Chicopee"), h5("embed Holyoke/Chicopee maps from mapping inequalities here")),
     tabItem(tabName = "charts", h2("charts go here")),
+    
+    #tab for maps
+    
     tabItem(tabName = "maps", h2("maps go here")),
-    tabItem(tabName = "static", h4("this is where all static maps will go")),
+    
+    #dropdown map tab for static maps 
+    
+    #problem: county_race_map from clean_tidycensusmap.Rmd isn't appearing, box is there but map/image isn't. what to do??
+    
+    tabItem(tabName = "static", h4("this is where all static maps will go"),
+            fluidRow(
+              box(title = "race map for county", status = "primary", plotOutput("county_race_map", height = 750, width = 7500)))),
+    
+    #dropdown interactive map option 
+    
     tabItem(tabName = "interactive", h4("this is where all interactive maps will go")),
+    
+    
     tabItem(tabName = "data", h2("Sources for data used to create charts and maps"), h4("mass.gov data pages and attach data files used"))
   )
 )
+
+
+# dashboardBody(
+#   fluidRow(
+#     box(plotOutput("plot1")),
+#     
+#     box(
+#       "Box content here", br(), "More box content",
+#       sliderInput("slider", "Slider input:", 1, 100, 50),
+#       textInput("text", "Text input:")
+#     )
+#   )
+# )
+# 
+# box(title = "Histogram", status = "primary", plotOutput("plot2", height = 250)),
 ```
 
 ```{r}
@@ -235,7 +265,6 @@ ui <- dashboardPage(skin = "yellow",header, sidebar, body)
 server <- function(input,output) {}
 shinyApp(ui, server)
 ```
-
 
 ```{r}
 # sidebar <- dashboardSidebar(
