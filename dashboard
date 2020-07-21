@@ -1,0 +1,229 @@
+---
+title: "dashboard"
+author: "Reese Hirota"
+date: "6/22/2020"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r=}
+# empty dashboard
+library("shinydashboard")
+library("shiny")
+header <- dashboardHeader(title = "Girls Inc. of the Valley")
+sidebar <- dashboardSidebar()
+body <- dashboardBody()
+```
+
+```{r}
+girls_boxes <- fluidRow(
+    box(
+      title = "Note", width = 12, status = "primary",
+      "This dashboard was created to primarily demonstrate the following environmental stressors girls from these areas face in their communities, which emphasize the essentiality of Girls Inc. programs."
+    ),
+    valueBox(
+      width = 12, paste0("Lead Levels"), "Chart and map available.", icon = icon("tint"), 
+      color = "yellow"
+    ), 
+    
+    valueBox(
+      width = 6, paste0("Pediatric Asthma"), "Chart and map available.", icon = icon("shapes"), 
+      color = "olive"
+    ),
+    
+    valueBox(
+      width = 6, paste0("Asthma Care"), "Chart and map available.", icon = icon("hospital"),
+      color = "olive"
+    ),
+    
+    valueBox(
+      width = 6, paste0("Childhood Poverty"), "Map available.", icon = icon("child"),
+      color = "purple"
+    ),
+    
+    valueBox(
+      width = 6, paste0("Household Income"), "Chart and map available.", icon = icon("home"),
+      color = "purple"
+    ),
+    
+    valueBox(
+      width = 12, paste0("Contact Girls Inc. of the Valley"), "PO Box 6812, Holyoke, MA 01041 | Tel: (413) 532-6247 |
+Fax: (413) 532-6454", icon = icon("envelope-open-text"),
+      color = "red"
+    )
+
+  )
+
+map_box <- fluidRow(
+  valueBox(
+    width = 12, paste0("Valley Map"), (HTML('<p>Click <a href="https://www.arcgis.com/apps/MapSeries/index.html?appid=5d154f7d1754474ebadc2869cb7fa0c0">HERE</a> for an interactive web app with the above features.</p>')), icon = icon(""), # no icon
+    color = "black"
+  ),
+  valueBox(
+    width = 12, paste0("Mapping Inequality"), (HTML('<p>Click <a href="https://dsl.richmond.edu/panorama/redlining/#loc=11/42.082/-72.594&city=holyoke-chicopee-ma">HERE</a> for an interactive web app detailing historic redlining in the area.</p>')), icon = icon(""), # no icon
+    color = "black"
+  )
+)
+```
+
+```{r}
+# body text
+
+# html for space 
+return <- HTML('<p>&nbsp;</p>')
+
+# text for the introduction/about/info tab
+about_girls <- "Girls Inc. of the Valley currently serves 474 girls ages 5-18 from the greater Chicopee, Holyoke, and Springfield areas. Through intentional and effective programming, both in school and after school, Girls Inc. focuses on the development of the whole girl - while helping to harness the power already within her. The combination of long-lasting mentoring relationships, a pro-girl environment, and research-based programming, equips girls to navigate gender, economic, and social barriers, and group up strong, smart, and bold."
+
+# text for the history tab
+springfield_info <- "Founded in 1636 as the first Springfield in the New World, during the American Revolution, George Washington designated it as the site of the Springfield Armory for its central location, subsequently the site of Shays' Rebellion. The city would also play a pivotal role in the Civil War, as a stop on the Underground Railroad and home of abolitionist John Brown, widely known for his raid on Harpers Ferry, and for the Armory's manufacture of the famed 'Springfield rifles' used ubiquitously by Union troops. Springfield has several nicknames—'The City of Firsts', due to the many innovations developed there, such as the first American dictionary, the first American gas-powered automobile, and the first machining lathe for interchangeable parts; 'The City of Homes', due to its Victorian residential architecture; and 'Hoop City', as basketball—one of the world's most popular sports—was invented in Springfield in 1891 by James Naismith. (Wikipedia)"
+
+holyoke_info <- "Holyoke, a city in Massachusetts Hampden County, is among the early planned industrial cities in the United States. Built in tandem with the Holyoke Dam to utilize the water power of Hadley Falls, it is one of a handful of cities in New England built on the grid plan. During the late 19th century the city produced an estimated 80% of the writing paper used in the United States and was home to the largest paper mill architectural firm in the country, as well as the largest paper, silk, and alpaca wool mills in the world.] Although a considerably smaller number of businesses in Holyoke work in the paper industry today, it is still commonly referred to as 'The Paper City'. Today the city contains a number of specialty manufacturing companies, as well as the Massachusetts Green High Performance Computing Center, an intercollegiate research facility which opened in 2012. Holyoke is also home to the Volleyball Hall of Fame and known as the 'Birthplace of Volleyball', as the internationally played Olympic sport was invented and first played at the local YMCA chapter by William G. Morgan in 1895. (Wikipedia)"
+
+chicopee_info <- "Chicopee is a city located on the Connecticut River in Hampden County, Massachusetts.One of the ventures of the Boston Associates, Chicopee is a city built around several smaller former mill communities on its namesake, the Chicopee River. During the 19th century, the city was home to the first American producer of friction matches as well as a variety of other industries, including the Ames Manufacturing Company, an early pioneer in machining lathes, building upon the work of Springfield's Thomas Blanchard, and the largest producer of swords and cutlasses for the Union Army during the Civil War. By the start of the 20th century, the city was home to a number of industrial plants, including those of the Fisk Tire Company, one of the largest tire makers of that time, and some of the earliest sporting goods factories of A. G. Spalding.
+Today the city is home to a variety of specialty manufacturers, as well as Westover Air Reserve Base, the largest Air Force Reserve Base of the United States, built in 1940 with the emergence of World War II. Chicopee today goes by the nickname the 'Crossroads of New England' as part of a business-development marketing campaign, one that West Springfield also uses. The name reflects the city's location among a number of metropolitan areas and its transportation network. (Wikipedia)"
+
+
+# all the text for the data tab
+data_html <- HTML('<p>Massachusetts Environmental Public Health Tracking</p>
+
+<ul>
+	<li><a href="https://cognos10.hhs.state.ma.us/cv10pub/cgi-bin/cognos.cgi?b_action=cognosViewer&amp;ui.action=run&amp;ui.object=%2fcontent%2ffolder%5b%40name%3d%27MEPHTN%27%5d%2ffolder%5b%40name%3d%27health%27%5d%2freport%5b%40name%3d%27childhood-lead-poisoning%27%5d&amp;ui.name=childhood-lead-poisoning&amp;run.outputFormat=&amp;run.prompt=true&amp;cv.header=false&amp;cv.toolbar=false#">Lead and Data Reports</a></li>
+	<li><a href="https://matracking.ehs.state.ma.us/Health-Data/Asthma/report-choice.html">Asthma and Data Reports</a></li>
+</ul>
+
+<p>Massachusetts Department of Elementary and Secondary Education</p>
+
+<ul>
+	<li><a href="http://www.doe.mass.edu/mcas/results.html">School and District Profiles</a></li>
+</ul>
+
+<p><a href="https://www.census.gov/programs-surveys/acs/data.html">US Census American Community Survey</a>&nbsp;(including&nbsp;<a href="https://www.arcgis.com/home/item.html?id=0e468b75bca545ee8dc4b039cbb5aff6">ACS Poverty Status Variables</a> and <a href="https://www.arcgis.com/home/item.html?id=c9fcad275db846838e747e417a66ca7a">Socioeconomic Status (NSES) Index</a>)</p>
+
+
+<p><a href="https://www.esri.com/en-us/home">Environmental Systems Research Institute</a>&nbsp;(including <a href="https://www.arcgis.com/home/item.html?id=e7ab0fa2d14742aea1bf6f5f0823c021">Diversity Index</a>)</p>
+
+<p>Mapping Inequality built&nbsp;by the Digital Scholarship Lab in University of Richmond.&nbsp;</p>')
+```
+
+
+```{r}
+# chart html 
+chart_html <- HTML('<h3>Average Annual Prevalence of Males and Females with Estimated Confirmed Blood <span style="color:#a87000"><strong>Lead Levels</strong></span>&nbsp;&ge;5&nbsp;&mu;g/dL in 2012-2017 that were between 9-&lt;48 Months of age.</h3>
+<p><em>Massachusetts Environmental Public Health Tracking</em></p>
+<p>It is important to note that the Center for Disease Control has set the upper limit for blood lead for children at 5&nbsp;&mu;g/dL, which this data set aims to reflect. At the community level, from 2012 through 2017, Springfield in particular consistenly had a statistically significantly higher lead levels than other Massachusetts communities. Holyoke too had some counts of statistically significantly igher lead levels, though the majority of counts were not statistically significant. Chicopee fared the best of these cities, with lead levels either not statistically significant, or occasionally statistically significantly lower.&nbsp;</p>
+<p><img alt="meph" src="https://i.ibb.co/JFthWXj/leadlevels.png" /></p>
+
+<h3><span style="color:#4c7300"><strong>Asthma</strong> <strong>Hospitalizations</strong></span>/ER Visits and <span style="color:#4c7300"><strong>Pediatric Asthma Prevalence</strong></span></h3>
+<p><em>Massachusetts Environmental Public Health Tracking</em></p>
+<p>Three data sets involving the communites Girls Inc. serves (Chicopee, Holyoke, and Springfield)&nbsp;were explored: asthma hospitalizations from 2000-2015, ER visits due to asthma from 2000-2015, and pediatric prevalence per 100 students for females aged 5-14, for the school years 2009-2010 to 2016-2017.</p>
+<p>All three cities have significantly higher asthma-related hospitalization rates (crude) in citywide comparison to the rest of Massachusetts, for both males and females from the ages of under 5 to 34 years. Springfield has a higher rate of asthma hospitalization amongst these cities. These communities also have significantly higher asthma-related emergency department visit rates (crude) for both males and females from under 5 years of age to 34 years of age, and significantly higher pediatric asthma prevalence in kindergarten to 8th grade students (females aged 5 to 14 years) relative to Massachusetts, with Holyoke having the greatest proportion of the three for both figures.</p>
+<p><img alt="" src="https://i.ibb.co/9VQMCM0/asthma0.png" /></p><p><img alt="" src="https://i.ibb.co/QkLgt49/asthma1.png" /></p><p><img alt="" src="https://i.ibb.co/F7zN14M/asthma3.png" /></p>
+
+<h3>Median<span style="color:#4c0073"><strong> Household Income</strong></span> and <strong><span style="color:#4c0073">Female Poverty Rates</span></strong> From 2014-2018</h3>
+<p><em>US Cenusus American Community Survey</em></p>
+<p>From the US Census American Community Survey 5-Year Data, the data was filtered to the zip codes from which 79% of Girls Inc. members resided (01040, 01013, 01104, 01109, and 01107), &nbsp;composing mostly of the cities of Holyoke, Chicopee, and Springfield. Zip code areas with less than 20 Girls Inc. members were excluded from visualizations for clarity. Two datasets were provided: median household income of the five zip codes compared to the rest of Hampden County and Massachusetts, and female poverty rates for populations aged 5-17 of the five zip codes compared to the rest of Hampden County and Massachusetts. This data provides insight into the lasting impacts of redlining in the area.&nbsp;</p>
+<p>All five zip codes representing a majority of Girls Inc. members have a considerably smaller median household income than the rest of Hampden County and Massachusetts. The zip codes belonging to Springfield (01104, 01107, and 01109), reperesenting 31% of Girls Inc. members, have the smallest median household income.&nbsp;</p>
+<p>All five zip codes representing a majority of Girls Inc. members have a considerably higher rate of female poverty among those aged 5-17 than the rest of Hampden County and Massachusetts. The Springfield zip code of 01107, representing 12% of Girls Inc. members, has the highest rate of female poverty within this age range.&nbsp;</p>
+<p><img alt="acs" src="https://i.ibb.co/rskMktV/censusmedhi.png" /></p>
+<p><img alt="acs" src="https://i.ibb.co/5hFyPvt/censusfpov.png" /></p>
+
+<h3>Girls&#39; MCAS Scores in 2019 for Springfield, Holyoke, and Chicopee</h3>
+<p><em>Massachusetts Department of Elementary and Secondary Education</em></p>
+<p>The Massachusetts Comprehensive Assessment System or MCAS are the state mandated exams given once a year for grades 3 through 8 once and once in high school for grade 10 as part of the state graduation requirement. There are 4 grades on the exam: Exceeding Expectations, Meeting Expectations, Partially Meeting Expectations, and Not Meeting Expectations.&nbsp;</p>
+<p>On average most girls in these districts are not meeting expectations regardless of subject matter or grade level. The math scores are particularly concerning as they illustrate not only low scores but declining scores.&nbsp;</p>
+<p><img alt="mcas" src="https://i.ibb.co/kmNdD9p/mcas.png" style="height:289px; width:481px" /></p>')
+```
+
+```{r}
+# map html
+lead_text <- HTML('<h3>Average Annual Prevalence of Females with Estimated Confirmed Blood <span style="color:#a87000"><strong>Lead Levels</strong></span> Greater than or Equal to 5 μg/dL in 2012 - 2017 that were between 9 to less than 48 Months of Age </h3>
+<p><em>Massachusetts Environmental Public Health Tracking</em></p>
+<p>Significance levels in Chicopee, Holyoke, and Springfield, the three towns served by Girls Inc., are mapped by census tract, with the surrounding areas mapped by town.
+It is important to note that the Centers for Disease Control and Prevention has set the upper limit for blood lead for children at 5 μg/dL, which this data set aims to reflect. From 2012 through 2017, many tracts within Springfield in particular had a statistically significantly higher prevalence of greater lead levels than other Massachusetts communities. Holyoke and Chicopee too had at least one tract with statistically significantly high lead levels.&nbsp;</p>')
+lead_map <- HTML('<p><img alt="" src="https://i.ibb.co/hM1RwdD/Screen-Shot-2020-07-20-at-2-03-13-PM.png" style="height:370px; width:607px" /></p>')
+
+pediatric_text <- HTML('<h3><span style="color:#4c7300"><strong>Pediatric Asthma Prevalence</strong></span> per 100 Students for Females for School Year 2016-2017</h3>
+<p><em>Massachusetts Environmental Public Health Tracking</em></p>
+<p>Chicopee, Holyoke, and Springfield all have statistically significantly higher asthma rates for the state of Massachusetts. Of the immediate surrounding towns, only two, East Longmeadow and Northampton, also had statistically significantly higher asthma rates. The rest of the surrounding towns either did not have statistically significant asthma rates or had statistically significantly lower asthma rates, in the case of Longmeadow and Easthampton.&nbsp;</p>')
+pediatric_map <- HTML('<p><img alt="" src="https://i.ibb.co/TBbv8k7/Screen-Shot-2020-07-20-at-2-54-42-PM.png" style="height:370px; width:607px" /></p>')
+
+hospitalization_text <- HTML('<h3>Age Adjusted Rates of <span style="color:#4c7300"><strong>Hospital Admission</strong></span>  per 10,000 People, for Females for 2015 by Community</h3>
+<p><em>Massachusetts Environmental Public Health Tracking</em></p>
+<p>Chicopee, Holyoke, and Springfield all have statistically significantly higher rates of hospital admission in comparison to other Massachusetts towns. Of data available for the surrounding towns, the rates are either not statistically significantly different or statistically significantly lower, with the exception of West Springfield which is also statistically significantly higher.&nbsp;</p>')
+hospitalization_map <- HTML('<p><img alt="" src="https://i.ibb.co/jWSWTWv/Screen-Shot-2020-07-20-at-3-01-46-PM.png" style="height:370px; width:607px"/></p>')
+
+child_text <- HTML('<h3>Percent of Children (Under 18 Years) Whose <strong><span style="color:#4c0073"> Income in the Past 12 Months is Below Poverty Level</span></strong></h3>
+<p><em>ACS Poverty Status Variables</em></p>
+<p>Although there is some variation amongst census tracts within the three cities, Chicopee, Holyoke, and Springfield all have high rates of childhood poverty, especially in comparison to the surrounding areas. Girls Inc. of the Valley participants, which consists of girls from these areas, more prevalently face economic hardships than girls who live in other towns.&nbsp;</p>')
+child_map <- HTML('<p><img alt="" src="https://i.ibb.co/GJ0fZTd/Screen-Shot-2020-07-20-at-3-05-50-PM.png" style="height:370px; width:607px"/></p>')
+
+household_text <- HTML('<h3>Median <strong><span style="color:#4c0073">Household Income</span></strong></h3>
+<p><em>Socioeconomic Status (NSES) Index by Census Tract, 2011-2015</em></p>
+<The median household income in the majority of households in communities served by Girls Inc., and particularly those from Springfield, is less than $40,350 annually. Household income in these towns generally lower than those of the surrounding area.&nbsp;</p>')
+household_map <- HTML('<p><img alt="" src="https://i.ibb.co/17Kscvn/Screen-Shot-2020-07-20-at-3-08-45-PM.png" style="height:370px; width:607px"/></p>')
+
+diversity_text <- HTML('<h3>Diversity Index 2018</span></strong></h3>
+<p><em>Environmental Systems Research Institute</em></p>
+<p>The Diversity Index represents the likelihood that at random, two people selected from the same census tract are of different racial or ethnic groups. The index increases to 100% (at which the area is evenly split amongst the different groups in the population). Based on the Diversity Index, Chicopee, Holyoke, and Springfield are much more diverse than the towns which immediately surround it.&nbsp;</p>')
+diversity_map <- HTML('<p><img alt="" src="https://i.ibb.co/G3Y5PfD/Screen-Shot-2020-07-20-at-3-11-14-PM.png" style="height:370px; width:607px"/></p>')
+```
+
+
+
+
+```{r}
+# add tabs
+sidebar <- dashboardSidebar(
+  sidebarMenu(
+    # tab : about girls inc
+    menuItem("About Girls Inc. of the Valley", tabName = "girls", icon = icon("heart")),
+    # tab : history of the valley
+    menuItem("History of the Valley", tabName = "history", icon = icon("book")),
+    # tab : charts from original report
+    menuItem("Overview Charts", tabName = "charts", icon = icon("chart-bar")),
+    # tab : maps from argis (new)
+    menuItem("Overview Map", icon = icon("map"), tabName = "map", badgeLabel = "interactive", badgeColor = "light-blue"),
+    # tab: sources 
+    menuItem("Data", icon = icon("table"), tabName = "data")
+    
+    # add search bar
+    # sidebarSearchForm(textId = "searchText", buttonId = "searchButton", label = "Search...")
+    
+  )
+)
+
+body <- dashboardBody(
+  # start introduction - done
+  tabItems(
+    tabItem(tabName = "girls", h1("About Girls Inc. of the Valley"),h3("Introduction"), h4(about_girls),girls_boxes),
+  # end introduction - done
+  
+  # start history - wip
+    tabItem(tabName = "history", h1("History of the Valley"),h3("Chicopee"),h5(chicopee_info),h3("Holyoke"),h5(holyoke_info),h3("Springfield"),h5(springfield_info)),
+  # end history - wip
+  
+  # start charts - wip
+    tabItem(tabName = "charts", h1("Overview Charts"), chart_html),
+  # end charts - wip
+  
+  # start map - wip
+    tabItem(tabName = "map", h1("Overview Map"), lead_text, lead_map, pediatric_text, pediatric_map, hospitalization_text, hospitalization_map, child_text, child_map, household_text, household_map, diversity_text, diversity_map, map_box),
+  # end map - wip 
+  
+  # start data - done
+    tabItem(tabName = "data", h1("Sources for Data"), data_html)
+  # end data - done
+  
+  )
+)
+
+# refresh ui
+# custom color for girls inc?
+ui <- dashboardPage(skin = "black", header, sidebar, body)
+server <- function(input,output) {}
+shiny::shinyApp(ui,server)
+```
+
+
