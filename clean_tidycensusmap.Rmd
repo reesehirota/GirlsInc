@@ -71,9 +71,94 @@ race_place %>%
 
 race maps with cities more clear
 ```{r}
+race_block <- get_acs(geography = "block group", variables = racevars, 
+                  state = "MA", county = "Hampden County",geometry = TRUE,
+                  summary_var = "B01003_001")  #summary variable is total pop
+
+options(tigris_use_cache = TRUE)
+
+race_block %>%
+  mutate(pct = 100 * (estimate /summary_est)) %>% #moe in the df is margin of error
+  ggplot(aes(fill = pct)) + #is a continuous scale so can't have discrete values
+  facet_wrap(~variable) +
+  geom_sf(color = NA) +
+  coord_sf(crs = 26918) + 
+  scale_fill_viridis_c()
+```
+
+***Individual race maps***
+
+--Largest racial populations--
+(consider adding asian)
+
+-Springfield: white, black, hispanic
+
+-Chicopee: white, black, hispanic
+
+-Holyoke:white, black, hispanic
+
+
+```{r}
+###white
+white <- get_acs(geography = "place", #census tract-works for individual cities
+                    variables = "B02001_002", #only white
+                    state = "MA",
+                    #county = "Hampden County",
+                    year = 2018, #is also the defualt
+                    geometry = TRUE,
+                    survey = "acs5",
+                    summary_var = "B01003_001") 
+
+white <- white %>%
+  mutate(pct = 100*(estimate/summary_est))
+
+
+
+###black
+
+black <- get_acs(geography = "place", #census tract-works for individual cities
+                    variables = "B02001_003", #only african american
+                    state = "MA",
+                    #county = "Hampden County",
+                    year = 2018,
+                    geometry = TRUE,
+                    survey = "acs5",
+                    summary_var = "B01003_001") 
+
+black <- black %>%
+  mutate(pct = 100*(estimate/summary_est))
+
+
+
+###hispanic
+
+hispanic <- get_acs(geography = "place", #census tract-works for individual cities
+                    variables = "B03002_001", #hispanic or latino origin by race
+                    state = "MA",
+                    #county = "Hampden County",
+                    year = 2018,
+                    geometry = TRUE,
+                    survey = "acs5",
+                    summary_var = "B01003_001") 
+
+hispanic <- hispanic %>%
+  mutate(pct = 100*(estimate/summary_est)) #pct is 100. how can summary and hispanic estimates be the same???
+
+
+
+#map output
+mapview(white, zcol = "pct")
+mapview(black, zcol = "pct")
+mapview(hispanic, zcol = "pct")
+
+
 
 ```
 
 
 ###Income###
+
+Income for the cities
+
+Income by race
 
